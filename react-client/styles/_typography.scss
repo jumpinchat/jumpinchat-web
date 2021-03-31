@@ -1,0 +1,62 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font: {
+    size: 1.3rem;
+    family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  color: $black-02;
+
+  &.dark {
+    color: $color-light0;
+  }
+}
+
+h3 {
+  margin: 1em 0 0;
+  font: {
+    family: 'Dosis', sans-serif;
+    weight: 400;
+  }
+  color: $color-blue-02;
+}
+
+p {
+  margin: 0;
+
+  & + & {
+    margin: {
+      top: 1em;
+    }
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.mobileHidden {
+  display: none;
+  visibility: hidden;
+  @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+    display: inline;
+    visibility: visible;
+  }
+}
+
+.icon--hd {
+  font: {
+    style: italic;
+    weight: 700;
+  }
+
+  letter-spacing: 0.5px;
+
+  &.disabled {
+    opacity: 0.5;
+  }
+}

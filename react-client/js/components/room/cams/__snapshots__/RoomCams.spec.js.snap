@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoomCams /> render footer should not show cam footer in vertical layout 1`] = `
+<div
+  className="cams"
+>
+  <RoomCamsHeader
+    audioContext={null}
+    audioPtt={true}
+    broadcastRestricted={false}
+    canBroadcast={false}
+    feedCount={3}
+    localAudioActive={false}
+    localStream={
+      Object {
+        "stream": Object {
+          "getAudioTracks": [MockFunction],
+        },
+      }
+    }
+    room={
+      Object {
+        "attrs": Object {
+          "owner": null,
+        },
+        "name": "room",
+        "settings": Object {
+          "modOnlyPlayMedia": false,
+        },
+        "users": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+      }
+    }
+    userCount={4}
+  />
+  <div
+    className="cams__ContainerInternal"
+  >
+    <YoutubeVideoContainer
+      dimensions={
+        Object {
+          "height": 0,
+          "width": 0,
+        }
+      }
+      hasChangedHandle={true}
+      onVideoEnd={[Function]}
+      onVideoReady={[Function]}
+      optionsOpen={false}
+      showVolumeControl={false}
+      userIsOperator={true}
+      videoDetails={
+        Object {
+          "duration": 123,
+          "endTime": "2019-01-29T22:46:26.356Z",
+          "mediaId": "foo",
+          "startAt": 0,
+          "startTime": "2019-01-29T22:46:26.356Z",
+        }
+      }
+      volume={1}
+    />
+    <div
+      className="cams__Wrapper"
+      id="cam-wrapper"
+    >
+      <RoomCam
+        audioContext={null}
+        dimensions={null}
+        feed={
+          Object {
+            "optionsOpen": false,
+            "userId": "foo",
+          }
+        }
+        index={0}
+        optionsOpen={false}
+        streamData={
+          Object {
+            "stream": Object {},
+            "userId": "foo",
+          }
+        }
+        user={
+          Object {
+            "hasChangedHandle": true,
+            "operator_id": "foo",
+            "settings": Object {
+              "playYtVideos": true,
+            },
+          }
+        }
+        users={Array []}
+        videoEnabled={true}
+      />
+      <RoomCam
+        audioContext={null}
+        dimensions={null}
+        feed={
+          Object {
+            "optionsOpen": false,
+            "userId": "bar",
+          }
+        }
+        index={1}
+        optionsOpen={false}
+        streamData={
+          Object {
+            "stream": Object {},
+            "userId": "bar",
+          }
+        }
+        user={
+          Object {
+            "hasChangedHandle": true,
+            "operator_id": "foo",
+            "settings": Object {
+              "playYtVideos": true,
+            },
+          }
+        }
+        users={Array []}
+        videoEnabled={true}
+      />
+      <RoomCam
+        audioContext={null}
+        dimensions={null}
+        feed={
+          Object {
+            "optionsOpen": false,
+            "userId": "baz",
+          }
+        }
+        index={2}
+        optionsOpen={false}
+        streamData={
+          Object {
+            "stream": Object {},
+            "userId": "baz",
+          }
+        }
+        user={
+          Object {
+            "hasChangedHandle": true,
+            "operator_id": "foo",
+            "settings": Object {
+              "playYtVideos": true,
+            },
+          }
+        }
+        users={Array []}
+        videoEnabled={true}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<RoomCams /> render footer should show cam footer in horizontal layout 1`] = `
+<div
+  className="cams"
+>
+  <RoomCamsHeader
+    audioContext={null}
+    audioPtt={true}
+    broadcastRestricted={false}
+    canBroadcast={false}
+    feedCount={3}
+    localAudioActive={false}
+    localStream={
+      Object {
+        "stream": Object {
+          "getAudioTracks": [MockFunction],
+        },
+      }
+    }
+    room={
+      Object {
+        "attrs": Object {
+          "owner": null,
+        },
+        "name": "room",
+        "settings": Object {
+          "modOnlyPlayMedia": false,
+        },
+        "users": Array [
+          1,
+          2,
+          3,
+          4,
+        ],
+      }
+    }
+    userCount={4}
+  />
+  <div
+    className="cams__ContainerInternal"
+  >
+    <YoutubeVideoContainer
+      dimensions={
+        Object {
+          "height": 0,
+          "width": 0,
+        }
+      }
+      hasChangedHandle={true}
+      onVideoEnd={[Function]}
+      onVideoReady={[Function]}
+      optionsOpen={false}
+      showVolumeControl={false}
+      userIsOperator={true}
+      videoDetails={
+        Object {
+          "duration": 123,
+          "endTime": "2019-01-29T22:46:26.356Z",
+          "mediaId": "foo",
+          "startAt": 0,
+          "startTime": "2019-01-29T22:46:26.356Z",
+        }
+      }
+      volume={1}
+    />
+    <div
+      className="cams__Wrapper"
+      id="cam-wrapper"
+    >
+      <RoomCam
+        audioContext={null}
+        dimensions={null}
+        feed={
+          Object {
+            "optionsOpen": false,
+            "userId": "foo",
+          }
+        }
+        index={0}
+        optionsOpen={false}
+        streamData={
+          Object {
+            "stream": Object {},
+            "userId": "foo",
+          }
+        }
+        user={
+          Object {
+            "hasChangedHandle": true,
+            "operator_id": "foo",
+            "settings": Object {
+              "playYtVideos": true,
+            },
+          }
+        }
+        users={Array []}
+        videoEnabled={true}
+      />
+      <RoomCam
+        audioContext={null}
+        dimensions={null}
+        feed={
+          Object {
+            "optionsOpen": false,
+            "userId": "bar",
+          }
+        }
+        index={1}
+        optionsOpen={false}
+        streamData={
+          Object {
+            "stream": Object {},
+            "userId": "bar",
+          }
+        }
+        user={
+          Object {
+            "hasChangedHandle": true,
+            "operator_id": "foo",
+            "settings": Object {
+              "playYtVideos": true,
+            },
+          }
+        }
+        users={Array []}
+        videoEnabled={true}
+      />
+      <RoomCam
+        audioContext={null}
+        dimensions={null}
+        feed={
+          Object {
+            "optionsOpen": false,
+            "userId": "baz",
+          }
+        }
+        index={2}
+        optionsOpen={false}
+        streamData={
+          Object {
+            "stream": Object {},
+            "userId": "baz",
+          }
+        }
+        user={
+          Object {
+            "hasChangedHandle": true,
+            "operator_id": "foo",
+            "settings": Object {
+              "playYtVideos": true,
+            },
+          }
+        }
+        users={Array []}
+        videoEnabled={true}
+      />
+    </div>
+  </div>
+  <RoomCamsFooter
+    camsDisabled={false}
+    canPlayMedia={true}
+    chatColors={Array []}
+    feedsCount={3}
+    feedsHighDef={true}
+    feedsMuted={false}
+    layout="HORIZONTAL"
+    modOnlyPlayMedia={false}
+    playYoutubeVideos={true}
+    roomHasOwner={false}
+    roomName="room"
+    settingsOptionsOpen={false}
+    user={
+      Object {
+        "hasChangedHandle": true,
+        "operator_id": "foo",
+        "settings": Object {
+          "playYtVideos": true,
+        },
+      }
+    }
+  />
+</div>
+`;

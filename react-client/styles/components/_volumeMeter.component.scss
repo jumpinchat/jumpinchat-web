@@ -1,0 +1,25 @@
+.volumeMeter {
+  &__Container {
+    width: 50px;
+    height: 6px;
+    background-color: $black-08;
+  }
+
+  &__Fill {
+    height: 100%;
+    width: 100%;
+    transform-origin: left;
+
+    &-low {
+      background-color: $green-02;
+    }
+
+    &-med {
+      background-color: $yellow-02;
+    }
+
+    &-high {
+      background-color: $red-02;
+    }
+  }
+}

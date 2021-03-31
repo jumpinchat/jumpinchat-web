@@ -1,0 +1,32 @@
+@keyframes tooltip-appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.dark {
+  .tooltip {
+    &__Content {
+      color: $color-light0-soft;
+    }
+  }
+}
+
+.tooltip {
+  &__Content {
+    max-width: 10em;
+    padding: 0.5em;
+    background-color: $black-01;
+    border-radius: 3px;
+    color: $white;
+
+    animation-name: tooltip-appear;
+    animation-duration: 125ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+  }
+}

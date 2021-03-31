@@ -1,0 +1,16 @@
+{
+  "username": "user",
+  "attrs": {
+    "join_date": "Thu Sep 24 2015 20:44:02 GMT+0100 (GMT Summer Time)",
+    "modified": "Thu Sep 24 2015 20:44:02 GMT+0100 (GMT Summer Time)",
+    "last_active": "Thu Sep 24 2015 20:44:02 GMT+0100 (GMT Summer Time)",
+    "join_ip": "1.2.3.4",
+    "last_login_ip": "1.2.3.4"
+  },
+  "auth": {
+    "email": "test@email.com",
+    "email_is_verified": false,
+    "passhash": "fdsafsda",
+    "signature": "signature"
+  }
+}

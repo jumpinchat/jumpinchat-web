@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoomChatHeader /> render should show unread conversation count in pm tab 1`] = `
+<div
+  className="chat__Header"
+>
+  <div
+    className="chat__HeaderMessageTabs"
+  >
+    <label
+      className="button chat__HeaderOption chat__HeaderOption-toggleChat"
+      title="Toggle chat feed"
+    >
+      <span
+        aria-hidden="true"
+        className="fa fa-chevron-down"
+      />
+      <input
+        checked={true}
+        className="jic-checkbox"
+        onChange={[Function]}
+        type="checkbox"
+      />
+    </label>
+    <button
+      className="button tabs__Item active"
+      onClick={[Function]}
+      type="button"
+    >
+      Chat
+    </button>
+    <button
+      className="button tabs__Item"
+      onClick={[Function]}
+      type="button"
+    >
+      PMs
+      <React.Fragment>
+         
+        <span
+          className="pill pill--blue pill--animated"
+        >
+          2
+        </span>
+      </React.Fragment>
+    </button>
+    <RoomChatShare
+      roomName="room"
+    />
+  </div>
+  <div
+    className="chat__HeaderOptions"
+  >
+    <RoomCamOptions
+      camsDisabled={false}
+      chatColors={
+        Array [
+          "foo",
+        ]
+      }
+      feedsCount={0}
+      feedsHighDef={false}
+      feedsMuted={false}
+      globalVolume={0}
+      layout="VERTICAL"
+      modOnlyPlayMedia={false}
+      playYoutubeVideos={true}
+      roomHasOwner={true}
+      roomName="room"
+      settingsOptionsOpen={false}
+      user={
+        Object {
+          "settings": Object {
+            "darkTheme": false,
+          },
+          "user_id": "foo",
+        }
+      }
+    />
+    <button
+      className="button chat__HeaderOption chat__HeaderOption--toggleUserlist button-blue"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fa fa-list-ul"
+      />
+    </button>
+  </div>
+</div>
+`;

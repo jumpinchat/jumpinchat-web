@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<YoutubeModal /> should not show playlist if search has results 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal__Window"
+  closeTimeoutMS={0}
+  contentLabel="Search youtube videos"
+  isOpen={true}
+  onRequestClose={[Function]}
+  overlayClassName="modal"
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <div
+    className="modal__Header"
+  >
+    Search for YouTube videos
+    <button
+      className="modal__Button modal__Button-close"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fa fa-times"
+      />
+    </button>
+  </div>
+  <div
+    className="modal__Body"
+  >
+    <YoutubeSearchModal
+      error={null}
+      results={
+        Array [
+          Object {},
+        ]
+      }
+      resultsLoading={false}
+    />
+  </div>
+</Modal>
+`;
+
+exports[`<YoutubeModal /> should not show playlist if search loading 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal__Window"
+  closeTimeoutMS={0}
+  contentLabel="Search youtube videos"
+  isOpen={true}
+  onRequestClose={[Function]}
+  overlayClassName="modal"
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <div
+    className="modal__Header"
+  >
+    Search for YouTube videos
+    <button
+      className="modal__Button modal__Button-close"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fa fa-times"
+      />
+    </button>
+  </div>
+  <div
+    className="modal__Body"
+  >
+    <YoutubeSearchModal
+      error={null}
+      results={Array []}
+      resultsLoading={true}
+    />
+  </div>
+</Modal>
+`;
+
+exports[`<YoutubeModal /> should show playlist if search not active 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal__Window"
+  closeTimeoutMS={0}
+  contentLabel="Search youtube videos"
+  isOpen={true}
+  onRequestClose={[Function]}
+  overlayClassName="modal"
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <div
+    className="modal__Header"
+  >
+    Search for YouTube videos
+    <button
+      className="modal__Button modal__Button-close"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fa fa-times"
+      />
+    </button>
+  </div>
+  <div
+    className="modal__Body"
+  >
+    <YoutubeSearchModal
+      error={null}
+      results={Array []}
+      resultsLoading={false}
+    />
+    <YoutubePlaylist
+      error={null}
+      list={
+        Array [
+          Object {
+            "_id": "foo",
+            "channelId": "abc",
+            "description": "description",
+            "duration": 123,
+            "link": "https://youtu.be/foo",
+            "mediaType": "yt",
+            "startedBy": Object {
+              "pic": "foo.jpg",
+              "userId": "foo",
+              "username": "foobar",
+            },
+            "title": "foo",
+          },
+        ]
+      }
+      onRemoveItem={[Function]}
+    />
+  </div>
+</Modal>
+`;

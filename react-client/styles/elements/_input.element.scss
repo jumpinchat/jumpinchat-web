@@ -1,0 +1,41 @@
+$height: 24px;
+
+.dark {
+  @import './input.dark';
+}
+
+.input {
+  margin: 0;
+  padding: {
+    top: 0;
+    right: 0.25em;
+    bottom: 0;
+    left: 0.25em;
+  };
+  background: $white;
+  border-radius: 0;
+  font: inherit;
+  color: $black-02;
+  outline: none;
+
+  &:focus {
+    border-color: $black-03;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.jic {
+  &-checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: {
+      top: -3px;
+      left: 0.5em;
+    }
+    vertical-align: middle;
+  }
+}

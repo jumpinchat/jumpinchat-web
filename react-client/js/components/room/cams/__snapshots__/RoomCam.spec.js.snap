@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoomCam /> Component Tests container element should render nothing if no dimensions 1`] = `null`;

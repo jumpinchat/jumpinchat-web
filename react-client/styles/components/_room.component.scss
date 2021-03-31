@@ -1,0 +1,36 @@
+.room {
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+
+  grid-template-areas:
+      "header"
+      "cams"
+      "chat";
+
+  @media screen and (orientation: landscape) {
+    grid-template-rows: 50px calc(100% - 90px) fit-content(300px);
+  }
+
+  @media screen and (min-height: $bp-height-01) {
+    grid-template-rows: 50px calc(100% - 50px - 270px) fit-content(270px);
+  }
+
+  @media screen and (min-height: $bp-height-01) and (min-width: $bp-02) {
+    grid-template-rows: 50px calc(100% - 50px - 300px) fit-content(300px);
+  }
+
+  &.layout--horizontal {
+    @media screen and (min-height: $bp-height-01) and (min-width: $bp-02) {
+      grid-template-areas:
+          "header header header"
+          "cams cams chat";
+      grid-template-rows: 50px calc(100% - 50px);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) $wideChatWidth;
+    }
+  }
+
+  &.dark {
+    color: $color-light0;
+  }
+}

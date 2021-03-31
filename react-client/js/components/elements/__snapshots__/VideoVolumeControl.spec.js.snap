@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VideoVolumeControl /> render should not show volume control if showControl is false 1`] = `
+<TetherComponent
+  attachment="top center"
+  constraints={
+    Array [
+      Object {
+        "attachment": "together",
+        "to": "scrollParent",
+      },
+    ]
+  }
+  renderElementTag="div"
+  renderElementTo={null}
+>
+  <button
+    className=""
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Array [
+          "fas",
+          "volume-off",
+        ]
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  </button>
+</TetherComponent>
+`;
+
+exports[`<VideoVolumeControl /> render should show correct icon when volume > 0 1`] = `
+<TetherComponent
+  attachment="top center"
+  constraints={
+    Array [
+      Object {
+        "attachment": "together",
+        "to": "scrollParent",
+      },
+    ]
+  }
+  renderElementTag="div"
+  renderElementTo={null}
+>
+  <button
+    className=""
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Array [
+          "fas",
+          "volume-up",
+        ]
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  </button>
+</TetherComponent>
+`;
+
+exports[`<VideoVolumeControl /> render should show volume control if showControl is true 1`] = `
+<TetherComponent
+  attachment="top center"
+  constraints={
+    Array [
+      Object {
+        "attachment": "together",
+        "to": "scrollParent",
+      },
+    ]
+  }
+  renderElementTag="div"
+  renderElementTo={null}
+>
+  <button
+    className=""
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    type="button"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className=""
+      fixedWidth={false}
+      flip={null}
+      icon={
+        Array [
+          "fas",
+          "volume-off",
+        ]
+      }
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+  </button>
+  <div
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <ForwardRef
+      onChangeVolume={[MockFunction]}
+      volume={0}
+    />
+  </div>
+</TetherComponent>
+`;

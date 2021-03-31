@@ -1,0 +1,222 @@
+@use "sass:color";
+$userListItemHeight: 30px;
+
+.dark {
+  @import './userList.dark';
+}
+
+.layout--horizontal {
+  @import './userList/layoutHorizontal.scss';
+}
+
+.chat {
+  &__UserList {
+    $width: 200px;
+    width: $width;
+    height: 260px;
+    padding: 0.25em;
+    box-sizing: border-box;
+    background: $white;
+    overflow-y: scroll;
+    flex-shrink: 0;
+
+    right: -$width;
+    transition: 0.2s transform ease-out;
+    box-shadow: -2px 0 2px rgba(0, 0, 0, 0.25);
+    touch-action: none;
+
+    &.scrollarea {
+      position: absolute;
+      z-index: 1000;
+    }
+
+    &--open {
+      transform: translateX(-$width);
+    }
+
+    @media screen and (min-width: $bp-02) {
+      right: auto;
+      box-shadow: none;
+      transform: none;
+
+      &.scrollarea {
+        position: static;
+      }
+
+      &--open {
+        transform: none;
+      }
+    }
+
+  }
+
+  &__UserListItem {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: $userListItemHeight;
+    cursor: pointer;
+
+    & + & {
+      border-top: 1px solid $black-09;
+    }
+
+    &--disabled {
+      color: $black-05;
+    }
+  }
+}
+
+.userList {
+  &__UserIcon {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-inline-end: 0.2em;
+    font-size: 1.5em;
+
+    &-op {
+      font: {
+        size: 1em;
+      }
+      color: $yellow-03;
+
+      text-shadow: 0 1px $yellow-02;
+    }
+
+    &-role {
+      font: {
+        size: 1em;
+      }
+
+      text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+
+      &.red {
+        color: $theme-red;
+        text-shadow: 0 1px darken($theme-red, 30%);
+      }
+
+      &.green {
+        color: $theme-green;
+        text-shadow: 0 1px darken($theme-green, 30%);
+      }
+
+      &.yellow {
+        color: $theme-yellow;
+        text-shadow: 0 1px darken($theme-yellow, 30%);
+      }
+
+      &.blue {
+        color: $theme-blue;
+        text-shadow: 0 1px darken($theme-blue, 30%);
+      }
+
+      &.purple {
+        color: $theme-purple;
+        text-shadow: 0 1px darken($theme-purple, 30%);
+      }
+
+      &.aqua {
+        color: $theme-aqua;
+        text-shadow: 0 1px darken($theme-aqua, 30%);
+      }
+
+      &.orange {
+        color: $theme-orange;
+        text-shadow: 0 1px darken($theme-orange, 30%);
+      }
+
+      &.grey {
+        color: $black-05;
+        text-shadow: 0 1px darken($black-05, 30%);
+      }
+
+      &.greyalt {
+        color: $black-02;
+        text-shadow: 0 1px darken($black-02, 30%);
+      }
+
+      &.redalt {
+        color: $theme-faded-red;
+        text-shadow: 0 1px darken($theme-faded-red, 30%);
+      }
+
+      &.greenalt {
+        color: $theme-faded-green;
+        text-shadow: 0 1px darken($theme-faded-green, 30%);
+      }
+
+      &.yellowalt {
+        color: $theme-faded-yellow;
+        text-shadow: 0 1px darken($theme-faded-yellow, 30%);
+      }
+
+      &.bluealt {
+        color: $theme-faded-blue;
+        text-shadow: 0 1px darken($theme-faded-blue, 30%);
+      }
+
+      &.purplealt {
+        color: $theme-faded-purple;
+        text-shadow: 0 1px darken($theme-faded-purple, 30%);
+      }
+
+      &.aquaalt {
+        color: $theme-faded-aqua;
+        text-shadow: 0 1px darken($theme-faded-aqua, 30%);
+      }
+
+      &.orangealt {
+        color: $theme-faded-orange;
+        text-shadow: 0 1px darken($theme-faded-orange, 30%);
+      }
+    }
+
+    &-broadcast {
+      font: {
+        size: 1.1em;
+      }
+    }
+
+    &--color {
+      width: 1em;
+      height: 1em;
+      background-color: currentColor;
+      border-radius: 0.5em;
+    }
+  }
+
+  &__UserIconType {
+
+    &-guest {
+      color: $black-06;
+    }
+
+    &-supporter {
+      color: $red-01;
+    }
+  }
+
+  &__UserIconImage {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__UserHandle {
+    flex-grow: 1;
+    &-current {
+      font-weight: 700;
+    }
+  }
+
+  &__Action {
+    height: 100%;
+    padding: 0 0.5em;
+    background: transparent;
+    border: none;
+
+    &:hover {
+      background: $black-08;
+    }
+  }
+}

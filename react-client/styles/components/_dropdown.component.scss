@@ -1,0 +1,89 @@
+.dark {
+  @import './dropdown.dark';
+}
+
+.dropdown {
+  &__Options {
+    width: 100%;
+    min-width: 15rem;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  &__Option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    padding: 0.5rem 1em;
+    background: $offWhite;
+    box-sizing: border-box;
+    border-bottom: 1px solid $black-08;
+    cursor: pointer;
+    user-select: none;
+
+    text: {
+      align: center;
+      decoration: none;
+    }
+
+    color: $black-03;
+
+    @media screen and (min-width: $bp-02) {
+      height: 3rem;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: $black-09;
+    }
+
+    &-button {
+      border: {
+        top: none;
+        right: none;
+        left: none;
+      }
+      width: 100%;
+
+      &:hover {
+        background: $black-09;
+      }
+    }
+
+
+    &-header,
+    &-header:hover {
+      background: $black-03;
+      border-bottom: 0;
+      color: $white;
+      cursor: auto;
+      font: {
+        weight: 700;
+      }
+    }
+
+    .jic-checkbox {
+      margin: {
+        top: 0;
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown__content {
+    display: none;
+    position: absolute;
+    z-index: 1001;
+}
+
+.dropdown--active .dropdown__content {
+    display: block;
+}

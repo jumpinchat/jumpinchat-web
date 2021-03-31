@@ -1,0 +1,11 @@
+.input {
+  color: $black-08;
+  border-color: $color-dark3;
+  background: {
+    color: $color-dark1;
+  }
+
+  &:focus {
+    border-color: $color-dark4;
+  }
+}

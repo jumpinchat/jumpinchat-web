@@ -1,0 +1,277 @@
+.dark {
+  @import './youtube.dark';
+}
+
+.youtube {
+  $root: 'youtube';
+
+  &__SearchInput {
+    padding: {
+      right: 40px;
+    }
+  }
+
+  &__ResultsContainer {
+    height: 270px;
+    margin: {
+      top: 1.6rem;
+    }
+    overflow-y: auto;
+    text-align: center;
+  }
+
+  &__Result {
+    display: inline-block;
+    max-width: 348px;
+    padding: 1em;
+    background-color: $black-08;
+    border: 1px solid $black-06;
+    border-radius: 3px;
+    text-align: center;
+
+    &:hover {
+      border-color: $color-blue-04;
+      background-color: $color-blue-06;
+    }
+
+    & + & {
+      margin: {
+        top: 3.2rem;
+      }
+    }
+  }
+
+  &__ResultTitle {
+    font: {
+      size: 1.15em;
+      weight: 700;
+    }
+  }
+
+  &__ResultThumbnail {
+    width: 100%;
+  }
+
+  &__VideoContainer {
+    position: relative;
+    flex-shrink: 0;
+    max-width: 50%;
+  }
+
+  &__VideoWrapper {
+    height: 100%;
+  }
+
+  &__VideoOverlay {
+    &:hover {
+      .#{$root}__Controls,
+      .#{$root}__Progress {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__Loading {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+  }
+
+  &__LoadingIndicator {
+    width: 64px;
+    height: 64px;
+
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+  }
+
+  &__Controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 0.5em;
+    left: 0;
+    width: 100%;
+    padding: {
+      right: 0.5em;
+      left: 0.5em;
+    }
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+  }
+
+  &__Control {
+    display: flex;
+    align-items: center;
+  }
+
+  &__Progress {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+  }
+
+  &__ProgressBarWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.4rem;
+    cursor: pointer;
+  }
+
+  &__ProgressBarBackground {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: rgba($white, 0.25);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  &__ProgressBar {
+    background: $white;
+    height: 100%;
+    border-radius: 2px;
+  }
+
+  &__ProgressBarSeek {
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin: {
+      top: -4px;
+    }
+    background-color: $white;
+    border-radius: 4px;
+    pointer-events: none;
+    cursor: pointer;
+  }
+
+  &__ProgressBarSeekTooltip {
+    margin: {
+      bottom: 0.5em;
+    }
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+    color: $white;
+    text-shadow: 0 -1px rgba(0, 0, 0, 1);
+  }
+
+  &__Countdown {
+    margin: {
+      left: 0.5em;
+    }
+    color: $white;
+  }
+
+  // Playlist
+
+  $playlistItemHeight: 88px;
+
+  &__PlaylistWrapper {
+    max-height: 270px;
+  }
+
+  &__PlaylistEmpty {
+    margin: {
+      top: 3.2rem;
+    }
+
+    padding: {
+      bottom: 1em;
+    }
+
+    text-align: center;
+  }
+
+  &__PlaylistItem {
+    display: flex;
+    position: relative;
+    height: $playlistItemHeight;
+    box-sizing: border-box;
+    padding: 16px 0;
+  }
+
+  &__PlaylistItemThumbWrapper {
+    flex-shrink: 0;
+    height: 100%;
+    max-width: 100px;
+  }
+
+  &__PlaylistItemThumb {
+    width: auto;
+    height: 100%;
+  }
+
+  &__PlaylistItemDetails {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: {
+      left: 1em;
+    }
+  }
+
+  &__PlaylistItemTitle {
+    display: inline-block;
+    width: 100%;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font: {
+      size: 1.2em;
+      weight: 400;
+    }
+  }
+
+  &__PlaylistItemAvatar {
+    width: 24px;
+    height: 24px;
+    margin: {
+      right: 0.35em;
+    }
+    border-radius: 12px;
+  }
+
+  &__PlaylistItemDuration {
+    display: flex;
+    margin: {
+      top: 0.25em;
+    }
+    line-height: 24px;
+  }
+
+  &__PlaylistItemActions {
+    display: flex;
+    width: 32px;
+    height: 100%;
+    align-items: center;
+    flex-shrink: 0;
+
+  }
+
+  &__PlaylistItemAction {
+    min-width: 100%;
+    padding: 0;
+  }
+
+  &__PlaylistItemMeta {
+    height: 100%;
+    margin: {
+      top: 4px;
+    }
+    font: {
+      size: 1.15em;
+    }
+    color: $black-06;
+  }
+}

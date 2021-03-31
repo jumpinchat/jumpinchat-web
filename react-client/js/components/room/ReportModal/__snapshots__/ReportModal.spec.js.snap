@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportModal /> render should show error message 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal__Window"
+  closeTimeoutMS={0}
+  contentLabel="Room info modal"
+  isOpen={false}
+  overlayClassName="modal"
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <div
+    className="modal__Header"
+  >
+    Report user
+  </div>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="modal__Body"
+    >
+      <div
+        className="form__InputGroup"
+      >
+        <label
+          className="form__InputLabel"
+          htmlFor="reason"
+        >
+          Reason
+        </label>
+        <select
+          className="input form__Input form__Input-inline form__Input-floating"
+          id="reason"
+          name="reason"
+        >
+          <option
+            disabled={true}
+            selected={true}
+            value=""
+          >
+            Please select a reason
+          </option>
+          <option
+            value="harassment"
+          >
+            Harassing or threatening me or a user
+          </option>
+          <option
+            value="abuse"
+          >
+            Abusive, defamatory or racist behaviour
+          </option>
+          <option
+            value="nudity"
+          >
+            Nudity
+          </option>
+          <option
+            value="explicit"
+          >
+            Explicit or offensive broadcast
+          </option>
+          <option
+            value="other"
+          >
+            Other (please describe below)
+          </option>
+        </select>
+      </div>
+      <div
+        className="form__InputGroup"
+      >
+        <label
+          className="form__InputLabel"
+          htmlFor="description"
+        >
+          More information (optional)
+        </label>
+        <textarea
+          className="input form__Input form__Input-inline form__Input-floating form__Input-textarea"
+          cols="30"
+          id="description"
+          name="description"
+          rows="10"
+        />
+      </div>
+      <span
+        className="text text-red modal__Error"
+      >
+        err
+      </span>
+      <p
+        className="text-sub"
+      >
+        Your visible chat log, as well as private conversations with the user being reported, will be sent as part of the report.
+      </p>
+      <p
+        className="text-sub"
+      >
+        Report users for violating the 
+        <a
+          href="/terms"
+          target="_blank"
+        >
+          terms of service
+        </a>
+        . Please refrain from reporting users for actions that can be dealt with by room moderators, such as breaking room rules.
+      </p>
+      <p
+        className="text-sub"
+      >
+        See the 
+        <a
+          href="/help/reporting"
+          target="_blank"
+        >
+          help page
+        </a>
+         for more information about reporting.
+      </p>
+    </div>
+    <div
+      className="modal__Footer"
+    >
+      <button
+        className="button button-blue button-floating modal__Action"
+        type="submit"
+      >
+        Send
+      </button>
+      <button
+        className="button button-default button-floating modal__Action"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</Modal>
+`;

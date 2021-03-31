@@ -1,0 +1,23 @@
+{
+  "verbose": true,
+  "watch": [
+    "srv"
+  ],
+  "env": {
+    "DEPLOY_LOCATION": "http://localhost:3000",
+    "YT_API_KEY": "",
+    "AWS_SES_ACCESS_KEY": "",
+    "AWS_SES_SECRET": "",
+    "AWS_S3_UPLOADS_ACCESS_KEY": "",
+    "AWS_S3_UPLOADS_SECRET": "",
+    "AWS_S3_UPLOADS_BUCKET": "jic-uploads",
+    "TURN_URIS": "turn.example.com",
+    "REDIS_URI": "redis://localhost:6379",
+    "MONGODB_URI": "mongodb://localhost/tc",
+    "JANUS_HTTP_URI_INTERNAL": "http://localhost:8088/janus",
+    "JANUS_WS_URI_INTERNAL": "ws://localhost:8188",
+    "JANUS_SERVER_IDS": "janus",
+    "JANUS_CODEC": "vp8",
+    "GCM_API_KEY": ""
+  }
+}

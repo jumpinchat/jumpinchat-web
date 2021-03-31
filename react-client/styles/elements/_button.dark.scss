@@ -1,0 +1,60 @@
+.button {
+  &-default {
+    background-color: $color-dark3;
+    color: $color-light0-soft;
+    &:hover {
+      background-color: $color-dark4;
+    }
+  }
+
+  &-blue {
+    background-color: $theme-blue;
+    color: $color-light0-soft;
+
+    &:hover {
+      background-color: $theme-bright-blue;
+      color: $color-light0-hard;
+    }
+  }
+
+  &-white {
+    color: $color-light0-soft;
+    background-color: $color-light4;
+
+    &:visited,
+    &:link {
+      color: inherit;
+    }
+
+    &:hover,
+    &:disabled {
+      background-color: $color-light3;
+    }
+  }
+
+  &-black {
+    color: $color-light0-soft;
+  }
+
+  &-red {
+    color: $color-light0-soft;
+  }
+  &-green {
+    color: $color-light0-soft;
+  }
+
+  &--text {
+    color: $color-light0-soft;
+  }
+
+
+  &-outlineBlack {
+    border-color: $color-light0-soft;
+    color: $color-light0-soft;
+
+    &:hover {
+      background: rgba($color-light0-soft, 0.25);
+      color: $color-light0-soft;
+    }
+  }
+}

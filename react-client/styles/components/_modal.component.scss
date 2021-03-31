@@ -1,0 +1,151 @@
+.dark {
+  @import './modal.dark';
+}
+
+.modal {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  --bg-color: #{$offWhite};
+
+  &__Window {
+    display: flex;
+    flex-direction: column;
+    width: 33em;
+    overflow: hidden;
+    border-radius: 3px;
+    outline: none;
+  }
+
+  &__Header {
+    position: relative;
+    padding: 1.25rem 1rem;
+    background: $black-02;
+    border-radius: 3px 3px 0 0;
+    font: {
+      size: 1em;
+      weight: 700;
+    }
+    color: $white;
+  }
+
+  &__Body {
+    padding: 2rem 1rem;
+    background: var(--bg-color);
+
+    a,
+    a:link,
+    a:visited {
+      color: inherit
+    }
+
+    a:hover,
+    a:focus {
+      color: $color-blue-02;
+    }
+
+    &--scroll {
+      max-height: 350px;
+      overflow-y: auto;
+      line-height: 1.5;
+    }
+
+    &--noPadding {
+      padding: 0;
+    }
+  }
+
+  &__LoadingContainer {
+    display: flex;
+    align-items: center;
+    min-width: 33em;
+    min-height: 33em;
+  }
+
+  &__Footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 0.5em;
+    background: $offWhite;
+  }
+
+  &__Error {
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(100% - 2em);
+    margin: 0 1em;
+    padding: 1em 0 0;
+    font: {
+      weight: 700;
+    }
+    text-align: center;
+  }
+
+  &__Button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+
+      font: {
+        size: 18px;
+        weight: 300;
+      }
+
+      opacity: 0.85;
+    }
+  }
+
+  &__Action {
+    //color: inherit;
+  }
+
+  &__SubText {
+    margin: {
+      top: 1em;
+    }
+
+    padding: 0 1rem 2rem;
+
+    color: $black-05;
+    text-align: center;
+
+    a, a:visited {
+      color: $color-blue-03;
+    }
+
+    a:hover,
+    a:focus {
+      color: $color-blue-02;
+    }
+  }
+
+  &__SectionTitle {
+    margin: 1em 0 0.25em;
+    font: {
+      size: 1em;
+      weight: 700;
+    }
+    color: inherit;
+    text-transform: uppercase;
+  }
+}

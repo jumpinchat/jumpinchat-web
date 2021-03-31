@@ -1,0 +1,551 @@
+$headerHeight: 40px;
+
+.dark {
+  @import './chat.dark';
+}
+
+.layout--horizontal .chat {
+  height: auto;
+
+
+  &__InputWrapper {
+    width: calc(100% - 1rem);
+    height: 4rem;
+    margin: 0 auto 0.5rem;
+    border-style: solid;
+    border-width: 1px;
+
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__Feed {
+    border-inline-end: none;
+  }
+
+  &__ScrollResume {
+    right: calc(#{$wideChatWidth/2} + 100px);
+    bottom: calc(4.5rem + 0.5em);
+    left: auto;
+    margin-inline-start: 0;
+    margin-inline-end: -5em;
+  }
+}
+
+.chat {
+  grid-area: chat;
+  display: flex;
+  flex-direction: column;
+
+  height: 270px;
+  background: $black-09;
+  border-radius: 3px;
+
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  transition: transform 125ms ease-out;
+
+  @media screen and (min-width: $bp-02) {
+    height: 300px;
+  }
+
+  &--open {
+    @media screen and (orientation: landscape) {
+      transform: translateY(-260px);
+    }
+
+    box-shadow: 0 -3px 3px 0 rgba(0,0,0,0.25)
+  }
+
+  &__Header {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    height: $headerHeight;
+    background: $black-07;
+  }
+
+  &__HeaderFeedSelect {
+    height: 100%;
+  }
+
+  &__HeaderMessageTabs {
+    display: flex;
+  }
+
+  &__HeaderOptions {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    margin-inline-start: 0.5em;
+
+    @media screen and (min-width: $bp-02) {
+      margin-inline-end: 1em;
+    }
+  }
+
+  &__HeaderOption {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: $headerHeight;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+
+    @media screen and (min-width: $bp-02) {
+      padding: 0 1rem;
+    }
+
+    .jic-checkbox {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    &.button-floating {
+      min-height: auto;
+      height: 3.2rem;
+    }
+
+    &--spaced {
+      margin-inline-start: 0.5rem;
+    }
+
+    &--toggleUserlist {
+      @media screen and (min-width: $bp-02) {
+        display: none;
+      }
+    }
+
+    &--video {
+      margin-inline-end: 0.5rem;
+
+      @media screen and (min-width: $bp-02) {
+        display: block;
+      }
+    }
+
+    &-toggleChat {
+      @media screen and (min-height: $bp-height-01) {
+        display: none;
+      }
+    }
+  }
+
+  &__HeaderOptionString {
+    display: none;
+
+    @media screen and (min-width: $bp-02) {
+      display: inline;
+    }
+  }
+
+  &__OpenYoutubeSearchString {
+    display: none;
+
+    @media screen and (min-width: $bp-02) {
+      display: inline;
+    }
+  }
+
+  &__Share {
+    display: flex;
+    height: 100%;
+    margin-inline-start: 0.5rem;
+  }
+
+  &__ShareInput {
+    display: none;
+    margin: 0.3em 0;
+    border: 1px solid $black-05;
+    border-radius: 3px 0 0 3px;
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      display: block;
+    }
+  }
+
+  &__ShareCopy {
+    margin: 0.3em 0;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+    color: $white;
+    background-color: $black-05;
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 0 -1px rgba(0,0,0,0.25) inset;
+
+    &:hover {
+      background-color: $black-04;
+    }
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  &__Body {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    height: 260px;
+    overflow: hidden;
+  }
+
+  &__FeedWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: $white;
+    touch-action: none;
+  }
+
+  &__Feed {
+    flex-grow: 1;
+    padding: 0.25em;
+    overflow-y: scroll;
+    border-inline-end: 1px solid $black-08;
+  }
+
+  &__InputWrapper {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    flex-shrink: 0;
+    height: 4.2rem;
+    border-top: {
+      width: 1px;
+      style: solid;
+    }
+
+    border-color: $black-08;
+    background: $offWhite;
+
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      height: 3.2rem;
+      border-inline-end: {
+        width: 1px;
+        style: solid;
+      }
+    }
+
+    &:focus-within {
+      border: {
+        color: $black-03;
+      }
+    }
+    box-sizing: border-box;
+  }
+
+  &__Input {
+    flex-grow: 1;
+    padding-inline-start: 0.5em;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__InputAction {
+    font: {
+      size: 1.25em;
+    }
+
+    &.button {
+      color: $color-blue-02;
+      background-color: transparent;
+
+      svg {
+        transition: transform 100ms ease-out;
+      }
+
+      &:hover {
+        color: $color-blue-03;
+
+        svg {
+          transform: scale(1.35);
+        }
+      }
+    }
+  }
+
+  &__Message {
+    display: flex;
+    align-items: baseline;
+    padding-inline-end: 0.5em;
+
+    @media screen and (min-width: $bp-01) {
+      font: {
+        size: 1.4rem;
+      }
+
+      line-height: 1.25;
+    }
+
+    & + & {
+      margin: {
+        top: 0.1em;
+      }
+    }
+
+    &.red {
+      color: $theme-red;
+    }
+
+    &.green {
+      color: $theme-green;
+    }
+
+    &.yellow {
+      color: $theme-yellow;
+    }
+
+    &.blue {
+      color: $theme-blue;
+    }
+
+    &.purple {
+      color: $theme-purple;
+    }
+
+    &.aqua {
+      color: $theme-aqua;
+    }
+
+    &.orange {
+      color: $theme-orange;
+    }
+
+    &.redalt {
+      color: $theme-faded-red;
+    }
+
+    &.greenalt {
+      color: $theme-faded-green;
+    }
+
+    &.yellowalt {
+      color: $theme-faded-yellow;
+    }
+
+    &.bluealt {
+      color: $theme-faded-blue;
+    }
+
+    &.purplealt {
+      color: $theme-faded-purple;
+    }
+
+    &.aquaalt {
+      color: $theme-faded-aqua;
+    }
+
+    &.orangealt {
+      color: $theme-faded-orange;
+    }
+  }
+
+  &__MessageHandle {
+    flex-shrink: 0;
+    padding: 0;
+    padding-inline-end: 0.5em;
+    cursor: pointer;
+
+    &:after {
+      content: ":";
+    }
+  }
+
+  &__MessageBody {
+    flex-grow: 1;
+
+    // `break-word` overrides `break-all`
+    // as the former only works on chrome
+    word-break: break-all;
+    word-break: break-word;
+    white-space: pre-wrap;
+
+    &-status {
+      color: $black-05;
+    }
+
+    &-userHighlight {
+      font: {
+        weight: 700;
+      }
+    }
+
+    &-info {
+      font-weight: 700;
+      color: $color-blue-03;
+    }
+
+    &-success {
+      font-weight: 700;
+      color: $green-01;
+    }
+
+    &-alert {
+      font-weight: 700;
+      color: $orange-02;
+    }
+
+    &-warning {
+      font-weight: 700;
+      color: $red-01;
+    }
+
+    &-error {
+      color: $red-01;
+    }
+
+    &-link {
+      color: $color-blue-03;
+
+      &:link {
+          color: $color-blue-03;
+      }
+
+      &:hover,
+      &:focus {
+          color: $color-blue-04;
+      }
+    }
+  }
+
+  &__Message:hover &__MessageTimestamp {
+    color: $black-03;
+  }
+
+  &__MessageTimestamp {
+    width: 4em;
+    flex-shrink: 0;
+    color: $black-06;
+    text-align: end;
+  }
+
+  &__ColorPicker {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 35px * 2;
+
+    @media screen and (min-width: $bp-02) {
+      height: 25px * 2;
+    }
+  }
+
+  &__ColorPickerOption {
+    position: relative;
+    flex-grow: 1;
+    min-width: 25px;
+    box-sizing: border-box;
+    border: 1px solid $black-04;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($white, 0.15);
+      }
+    }
+
+    & + & {
+      border-inline-start: none;
+    }
+
+    &-active {
+      border: {
+        bottom: 3px solid $color-blue-03;
+      }
+    }
+  }
+
+  &__Color {
+    &-red {
+      background-color: $theme-red;
+    }
+
+    &-green {
+      background-color: $theme-green;
+    }
+
+    &-yellow {
+      background-color: $theme-yellow;
+    }
+
+    &-blue {
+      background-color: $theme-blue;
+    }
+
+    &-purple {
+      background-color: $theme-purple;
+    }
+
+    &-aqua {
+      background-color: $theme-aqua;
+    }
+
+    &-orange {
+      background-color: $theme-orange;
+    }
+
+    &-redalt {
+      background-color: $theme-faded-red;
+    }
+
+    &-greenalt {
+      background-color: $theme-faded-green;
+    }
+
+    &-yellowalt {
+      background-color: $theme-faded-yellow;
+    }
+
+    &-bluealt {
+      background-color: $theme-faded-blue;
+    }
+
+    &-purplealt {
+      background-color: $theme-faded-purple;
+    }
+
+    &-aquaalt {
+      background-color: $theme-faded-aqua;
+    }
+
+    &-orangealt {
+      background-color: $theme-faded-orange;
+    }
+  }
+
+  &__ScrollResume {
+    $bottom: calc(3.2rem + 0.5em);
+    position: fixed;
+    bottom: $bottom;
+    left: 50%;
+    border-radius: 1.6rem;
+    min-width: 10em;
+    margin-inline-start: -5em;
+    transform: translate3d(0, $bottom, 0);
+    opacity: 0;
+    transition: 250ms all ease-out;
+
+    @media screen and (min-width: $bp-02) {
+      left: calc(50% - 100px);
+    }
+
+    &--visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PmWrapper /> render should not show conversation wrapper if conversation selected 1`] = `
+<div
+  className="privateMessages__Wrapper"
+>
+  <PmFeed
+    chatInputValue=""
+    onChange={[Function]}
+    onFocus={[Function]}
+    onSubmit={[Function]}
+    privateMessages={
+      Array [
+        Object {
+          "messages": Array [],
+          "user": Object {
+            "userListId": "foo",
+          },
+        },
+      ]
+    }
+    selectedConversation="convo"
+  />
+  <PmConversationList
+    closeConversation={[Function]}
+    handleClickOutside={[Function]}
+    menuOpen={null}
+    openMenu={[Function]}
+    privateMessages={
+      Array [
+        Object {
+          "messages": Array [],
+          "user": Object {
+            "userListId": "foo",
+          },
+        },
+      ]
+    }
+    selectConversation={[Function]}
+    selectedConversation="convo"
+  />
+</div>
+`;
+
+exports[`<PmWrapper /> render should show conversation wrapper if no conversation selected 1`] = `
+<div
+  className="privateMessages__Wrapper"
+>
+  <PmFeed
+    chatInputValue=""
+    onChange={[Function]}
+    onFocus={[Function]}
+    onSubmit={[Function]}
+    privateMessages={
+      Array [
+        Object {
+          "messages": Array [],
+          "unreadMessages": 0,
+          "user": Object {
+            "userListId": "foo",
+          },
+        },
+      ]
+    }
+    selectedConversation={null}
+  />
+  <PmConversationList
+    closeConversation={[Function]}
+    handleClickOutside={[Function]}
+    menuOpen={null}
+    openMenu={[Function]}
+    privateMessages={
+      Array [
+        Object {
+          "messages": Array [],
+          "unreadMessages": 0,
+          "user": Object {
+            "userListId": "foo",
+          },
+        },
+      ]
+    }
+    selectConversation={[Function]}
+    selectedConversation={null}
+  />
+</div>
+`;

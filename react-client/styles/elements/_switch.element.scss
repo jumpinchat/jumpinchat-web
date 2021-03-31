@@ -1,0 +1,116 @@
+.switch {
+  &__Wrapper {
+    display: flex;
+    align-items: center;
+    margin: {
+      bottom: 1em;
+    }
+    font: {
+      weight: 700;
+    }
+    cursor: pointer;
+    user-select: none;
+
+    &--disabled {
+      color: $black-05;
+    }
+
+    .jic-checkbox {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+  &__Input {
+    position: relative;
+    $height: 2em;
+    $switch-padding: 2px;
+    $switch-height: calc(#{$height} - #{$switch-padding * 2});
+    flex-shrink: 0;
+    width: 3.5em;
+    height: $height;
+    margin: {
+      left: 1em;
+    }
+    border: 0;
+    border-radius: ($height/2);
+    outline: none;
+    background-color: $black-05;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: $switch-padding;
+      left: $switch-padding;
+
+      width: $switch-height;
+      height: $switch-height;
+      transform: translateX(0);
+      box-sizing: border-box;
+      background-color: $white;
+      border-radius: $height;
+      transition: all 125ms ease-out;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background: $black-06;
+      &:after {
+        background: $black-04;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 3px 2px $color-blue-03, 0 0 0 1px $white;
+    }
+
+    &--checked {
+      background-color: $color-blue-02;
+      &:after {
+        left: calc(100% - #{$switch-padding});
+        transform: translateX(-100%);
+      }
+    }
+
+    &:active {
+      &:after {
+        width: calc(#{($height * 1.25)} - #{$switch-padding * 2});
+      }
+    }
+  }
+
+  &__Label {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__HelpText {
+    width: 100%;
+    font: {
+      weight:  400;
+    }
+  }
+}
+
+.dark {
+  .switch {
+    &__Input {
+      background-color: $color-light4;
+      &:after {
+        background-color: $color-light0;
+      }
+
+      &--checked {
+        background-color: $theme-blue;
+      }
+
+      &:disabled {
+        background-color: $color-dark4;
+        &:after {
+          background-color: $color-dark3;
+        }
+      }
+    }
+  }
+}

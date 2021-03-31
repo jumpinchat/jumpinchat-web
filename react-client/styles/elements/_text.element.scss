@@ -1,0 +1,29 @@
+.text {
+  &-sub {
+    font: {
+      size: 1.2rem;
+    }
+
+    color: $black-04;
+  }
+
+  &-red {
+    color: $red-01;
+  }
+}
+
+.dark {
+  .text {
+    &-sub {
+      color: $color-light4;
+    }
+
+    &-red {
+      display: inline-block;
+      background-color: $red-01;
+      color: $color-light0;
+      border-radius: 2px;
+      padding: 2px 4px;
+    }
+  }
+}

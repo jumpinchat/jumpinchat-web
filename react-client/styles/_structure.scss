@@ -1,0 +1,21 @@
+.clear-fix:before,
+.clear-fix:after {
+	content: "";
+	display: table;
+}
+
+.clear-fix:after {
+	clear: both;
+}
+
+.scrollarea .scrollbar-container {
+  z-index: 1000 !important;
+}
+
+.app {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

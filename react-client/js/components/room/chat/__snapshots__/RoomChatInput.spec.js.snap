@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoomChatInput /> render should render a gift button if the room has an owner 1`] = `
+<form
+  className="chat__InputWrapper"
+  onSubmit={[Function]}
+>
+  <TetherComponent
+    attachment="top center"
+    constraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "scrollParent",
+        },
+      ]
+    }
+    renderElementTag="div"
+    renderElementTo={null}
+  >
+    <input
+      className="input chat__Input"
+      maxLength="255"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Start typing"
+      type="text"
+      value=""
+    />
+  </TetherComponent>
+  <EmojiPicker
+    customEmoji={Array []}
+    onClickOutside={[Function]}
+    onSelect={[Function]}
+    onToggle={[Function]}
+    open={false}
+  />
+  <Tooltip
+    position="top center"
+    text="Gift the room support to add perks"
+  >
+    <button
+      className="button button-clear chat__InputAction"
+      onClick={[Function]}
+      type="button"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon={
+          Array [
+            "fas",
+            "gift",
+          ]
+        }
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+    </button>
+  </Tooltip>
+</form>
+`;
+
+exports[`<RoomChatInput /> render should render the input with an emoji picker 1`] = `
+<form
+  className="chat__InputWrapper"
+  onSubmit={[Function]}
+>
+  <TetherComponent
+    attachment="top center"
+    constraints={
+      Array [
+        Object {
+          "attachment": "together",
+          "to": "scrollParent",
+        },
+      ]
+    }
+    renderElementTag="div"
+    renderElementTo={null}
+  >
+    <input
+      className="input chat__Input"
+      maxLength="255"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Start typing"
+      type="text"
+      value=""
+    />
+  </TetherComponent>
+  <EmojiPicker
+    customEmoji={Array []}
+    onClickOutside={[Function]}
+    onSelect={[Function]}
+    onToggle={[Function]}
+    open={false}
+  />
+</form>
+`;

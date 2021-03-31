@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoomCamOptions /> should not show the play video button if room is not registered 1`] = `
+<React.Fragment>
+  <div
+    className="chat__HeaderOptions"
+  >
+    <RoomChatSettingsMenu
+      chatColors={
+        Array [
+          "1",
+          "2",
+        ]
+      }
+      darkTheme={false}
+      layout="horizontal"
+      modOnlyPlayMedia={false}
+      onClick={[Function]}
+      open={false}
+      playYoutubeVideos={false}
+      roomName="foo"
+      user={
+        Object {
+          "operator_id": null,
+          "roles": Array [
+            "foo",
+          ],
+          "settings": Object {
+            "darkTheme": false,
+          },
+          "user_id": "foo",
+        }
+      }
+    />
+    <RoomCamsAudioControl
+      onChange={[Function]}
+      volume={0}
+    />
+  </div>
+</React.Fragment>
+`;
+
+exports[`<RoomCamOptions /> should show the play video button if room is registered 1`] = `
+<React.Fragment>
+  <div
+    className="chat__HeaderOptions"
+  >
+    <button
+      className="button button-floating button-blue chat__HeaderOption chat__HeaderOption--spaced chat__HeaderOption--video"
+      onClick={[Function]}
+      type="button"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon={
+          Array [
+            "far",
+            "film",
+          ]
+        }
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+       
+      <span
+        className="chat__HeaderOptionString"
+      >
+        Play videos
+      </span>
+    </button>
+    <RoomChatSettingsMenu
+      chatColors={
+        Array [
+          "1",
+          "2",
+        ]
+      }
+      darkTheme={false}
+      layout="horizontal"
+      modOnlyPlayMedia={false}
+      onClick={[Function]}
+      open={false}
+      playYoutubeVideos={false}
+      roomName="foo"
+      user={
+        Object {
+          "operator_id": null,
+          "roles": Array [
+            "foo",
+          ],
+          "settings": Object {
+            "darkTheme": false,
+          },
+          "user_id": "foo",
+        }
+      }
+    />
+    <RoomCamsAudioControl
+      onChange={[Function]}
+      volume={0}
+    />
+  </div>
+</React.Fragment>
+`;

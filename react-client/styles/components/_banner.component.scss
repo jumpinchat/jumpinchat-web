@@ -1,0 +1,82 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 32px;
+  padding: {
+    top: 0.5em;
+    bottom: 0.5em;
+    left: 0.5em;
+  }
+  background: $black-03;
+  box-sizing: border-box;
+  color: $white;
+  font: {
+    size: 1em;
+    weight: 700;
+  }
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+
+  text-shadow: 0 1px rgba(#000000, 0.5);
+  box-shadow: 0 1px rgba($white, 0.25) inset, 0 -1px rgba(#000000, 0.25) inset;
+
+  &:first-child {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &__Icon {
+    margin: {
+      right: 0.5em;
+    }
+  }
+
+  &__Close {
+    width: 32px;
+    background: transparent;
+    border: none;
+    opacity: 0.75;
+    color: $white;
+    font: {
+      size: 1.2em;
+    }
+  }
+
+  &-red {
+    background: {
+      color: $red-01;
+    }
+  }
+
+  &-blue {
+    background: {
+      color: $color-blue-02;
+    }
+  }
+
+  &-yellow {
+    background: {
+      color: $yellow-01;
+    }
+  }
+
+  &-green {
+    background: {
+      color: $green-02;
+    }
+  }
+
+  &__Message {
+    max-width: 66ch;
+    margin: {
+      right: 1em;
+    }
+  }
+}

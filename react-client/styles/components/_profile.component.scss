@@ -1,0 +1,70 @@
+.profile {
+  display: flex;
+
+  &__Sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 128px;
+  }
+
+  &__Pic {
+    flex-shrink: 0;
+    width: 128px;
+    height: 128px;
+    margin: {
+      right: 0.5rem;
+      bottom: 0.5rem;
+    };
+  }
+
+  &__Trophies {
+    text-align: center;
+  }
+
+  &__Trophy {
+    display: inline-block;
+    width: calc(64px - 0.5rem);
+    height: calc(64px - 0.5rem);
+    border-radius: 6px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    margin: 0.25rem;
+    overflow: hidden;
+  }
+
+  &__TrophyImage {
+    width: 100%;
+  }
+
+  &__Body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__Info {
+    flex-grow: 1;
+    padding: {
+      left: 1em;
+    }
+  }
+
+  &__Actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 128px;
+    padding: 0 1em;
+  }
+
+  &__Action {
+    width: 100%;
+    box-sizing: border-box;
+
+    & + & {
+      margin: {
+        top: 0.5em;
+      }
+    }
+  }
+}

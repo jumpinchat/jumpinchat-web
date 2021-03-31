@@ -1,0 +1,486 @@
+.dark {
+  @import './cams.dark';
+}
+
+.layout--horizontal .cams {
+  .cams {
+    height: auto;
+
+    &__ContainerInternal {
+      max-height: calc(100% - 40px - 40px);
+    }
+  }
+}
+
+
+.cams {
+  grid-area: cams;
+  display: flex;
+  flex-direction: column;
+  background: $black-02;
+  box-sizing: border-box;
+
+  @media screen and (orientation: landscape) {
+    height: calc(100vh - 90px);
+  }
+
+  @media screen and (min-height: $bp-height-01) {
+    height: 100%;
+  }
+
+
+  &__Header {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: space-between;
+      height: 40px;
+      padding: 0 1em;
+      background: $white;
+  }
+
+  &__HeaderActions {
+      display: flex;
+      flex-shrink: 0;
+  }
+
+  &__Action {
+      height: 34px;
+      margin: {
+        top: 3px;
+      }
+      margin-inline: {
+        start: 0.5em;
+      }
+
+      font: {
+        size: 1.25em;
+      }
+
+      @media screen and (min-width: $bp-02) {
+        font: {
+          size: 1em;
+        }
+      }
+  }
+
+  &__LocalAudioActions {
+      display: flex;
+  }
+
+  &__AudioVolume {
+    display: flex;
+    align-items: center;
+    margin-inline: {
+      start: 4px;
+    }
+  }
+
+  &__RoomInfo {
+      display: flex;
+      margin-inline: {
+          end: 1em;
+      }
+  }
+
+  &__RoomDisplayPic {
+    max-width: calc(40px / 0.75);
+    height: 100%;
+    margin-inline: {
+      end: 1em;
+    }
+  }
+
+  &__RoomName {
+      margin: {
+        top: 0;
+        bottom: 0;
+      }
+
+      margin-inline: {
+        end: 1em;
+      }
+
+      font: {
+          size: 0.8em;
+          weight: 700;
+      }
+
+      text: {
+          transform: uppercase;
+      }
+
+      line-height: 40px;
+
+      @media screen and (min-width: $bp-02) {
+        font: {
+          size: 1.5em;
+        }
+      }
+  }
+
+  &__RoomDescriptionWrapper {
+    align-self: center;
+    max-width: 40em;
+    padding-inline: {
+      start: 1em;
+    }
+  }
+
+  &__RoomDescription {
+    overflow: hidden;
+    height: 2.4em;
+    line-height: 1.3;
+  }
+
+  &__InfoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text: {
+      align: center;
+    }
+
+    @media screen and (min-width: $bp-02) {
+      margin: {
+        top: 0.15em;
+      }
+    }
+
+    & + & {
+      margin-inline: {
+        start: 0.5em;
+      }
+
+      @media screen and (min-width: $bp-02) {
+        margin-inline: {
+          start: 1em;
+        }
+      }
+    }
+  }
+
+  &__InfoCount {
+      display: block;
+
+      font: {
+          size: 1em;
+          weight: 700;
+      }
+
+      line-height: 1;
+
+      @media screen and (min-width: $bp-02) {
+        font: {
+          size: 1.5em;
+        }
+      }
+  }
+
+  &__InfoLabel {
+      font: {
+          size: 0.85em;
+          weight: 700;
+      }
+
+      color: $black-04;
+  }
+
+  &__StreamCountWrapper {
+      text-align: center;
+  }
+
+  &__StreamCount {
+  }
+
+  &__ContainerInternal {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    max-width: 100vw;
+    max-height: calc(100% - 40px);
+  }
+
+  &__Wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      overflow-y: hidden;
+  }
+
+  &__CamWrapper {
+      display: inline-block;
+      float: left;
+      padding: 0.15em;
+      box-sizing: border-box;
+      outline: none;
+
+      @media screen and (min-width: $bp-02) {
+        padding: 0.25em;
+      }
+  }
+
+  &__Cam {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: $black-01;
+
+      overflow: hidden;
+
+      border: 1px solid;
+
+      border-color: $black-08;
+
+      box-sizing: border-box;
+
+      transition: box-shadow 0.25s ease-out, border-color 0.25s ease-out;
+
+      @media screen and (min-width: $bp-02) {
+        border-width: 2px;
+      }
+
+      video {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      &-audioActive {
+        box-shadow: 0 0 2px 2px $color-blue-03;
+        border-color: $color-blue-03;
+      }
+  }
+
+  &__CamVideo {
+    &:-webkit-full-screen {
+        width: 100%;
+        height: 100%;
+    }
+
+    &::-webkit-media-controls-enclosure {
+        display: none !important;
+    }
+  }
+
+  &__CamHandle {
+      position: absolute;
+      top: 0.5em;
+      left: 1em;
+      color: $white;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+  }
+
+  &__CamWatermark {
+    $height: 32px;
+    position: absolute;
+    top: 0.25em;
+    right: 0.5em;
+    width: $height;
+    height: $height;
+    background: {
+      image: url('../img/logo.svg');
+      size: $height;
+      repeat: no-repeat;
+    }
+    opacity: 0.4;
+
+    @media screen and (min-width: $bp-02) {
+      top: 0.5em;
+      right: 1em;
+    }
+  }
+
+  &__CamOverlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      transition: 0.25s background-color ease-out;
+
+      &:hover,
+      &.open {
+          background-color: rgba(0, 0, 0, 0.25);
+
+          .cams__OptionsTrigger,
+          .cams__FullscreenOption,
+          .cams__ReportAction,
+          .cams__CamAudioControls,
+          .cams__PlayPause {
+              opacity: 1;
+          }
+      }
+
+      &-noCam {
+          background-image: url("../img/icon-cam.svg");
+          background-position: center;
+          background-size: 25%;
+          background-repeat: no-repeat;
+      }
+
+      &-micOnly {
+          background-image: url("../img/icon-mic.svg");
+          background-position: center;
+          background-size: 25%;
+          background-repeat: no-repeat;
+      }
+  }
+
+  &__OptionsTrigger {
+      width: 50%;
+      margin: 0 auto;
+      opacity: 0;
+
+      transition: opacity 0.25s ease-out;
+  }
+
+  &__CamAudioControls {
+      position: absolute;
+      right: 0.5em;
+      bottom: 0.5em;
+      opacity: 0;
+  }
+
+  &__PlayPause {
+      position: absolute;
+      left: 0.5em;
+      bottom: 0.5em;
+      opacity: 0;
+  }
+
+
+
+  &__FullscreenOption {
+      position: absolute;
+      bottom: 0.5em;
+      left: 0.5em;
+      opacity: 0;
+  }
+
+  &__ReportAction {
+    position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+      opacity: 0;
+
+  }
+
+  &__CamControl {
+      width: 2.4rem;
+      height: 2.4rem;
+      background: transparent;
+      border: none;
+      font: {
+          size: 1.25em;
+      }
+      text-align: center;
+      line-height: 2.4rem;
+      color: $white;
+
+      @media screen and (min-width: $bp-02) {
+        width: 4.4rem;
+        height: 4.4rem;
+        line-height: 4.4rem;
+        font: {
+            size: 2em;
+        }
+      }
+  }
+
+  &__VolumeSlider {
+    width: 40px;
+    padding: 1em 0.25em;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+  }
+
+  &__LoadingWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__Restrictions {
+    display: flex;
+    align-items: center;
+    margin: 0 0.5em;
+    @media screen and (min-width: $bp-02) {
+      margin: 0 2.4rem;
+    }
+  }
+
+  &__Restriction {
+    $itemWidth: 24px;
+    $itemHeight: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $itemWidth;
+    height: $itemHeight;
+
+    background: {
+      color: $color-blue-02;
+    }
+
+    border-radius: 50%;
+    font: {
+      size: 1rem;
+    }
+    color: $white;
+
+    @media screen and (min-width: $bp-02) {
+      $itemWidth: 32px;
+      $itemHeight: 32px;
+      width: $itemWidth;
+      height: $itemHeight;
+
+      font: {
+        size: 1.3em;
+      }
+    }
+
+
+    & + & {
+      margin-inline: {
+        start: 0.35em;
+      }
+    }
+
+    &--18plus {
+      font: {
+        size: 1.15em;
+        weight: 700;
+      }
+      letter-spacing: -0.9px;
+
+      background: {
+        color: $red-02;
+      }
+
+      border-radius: $itemWidth / 2;
+
+      &:after {
+        content: "18+";
+        color: $white;
+      }
+    }
+  }
+}

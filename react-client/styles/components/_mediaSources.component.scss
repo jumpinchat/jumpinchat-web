@@ -1,0 +1,110 @@
+.dark {
+  @import './mediaSources.dark';
+}
+
+.mediaSources {
+  &__QualitySelect {
+    padding: {
+      top: 1rem;
+      right: 2rem;
+      left: 2rem;
+    }
+  }
+
+  &__SourceListWrapper {
+    max-height: 350px;
+    overflow-y: auto;
+  }
+
+  &__SourceList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: {
+      top: 2rem;
+    }
+  }
+
+  &__SourceWrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: calc(160px + 1em + 4px);
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid $black-05;
+    background-color: $black-09;
+    border-radius: 3px;
+    color: inherit;
+
+    &:hover {
+      border-color: $color-blue-03;
+    }
+
+    &-error {
+      border-color: $red-02;
+      cursor: not-allowed;
+
+      &:hover {
+        border-color: $red-02;
+      }
+    }
+  }
+
+  &__Source {
+    width: 160px;
+    min-height: 120px;
+
+    &-audio,
+    &-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4em;
+    }
+
+    &-error {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      color: $red-02;
+      font: {
+        size: 2em;
+      }
+      text-align: center;
+    }
+  }
+
+  &__SourceErrorMessage {
+    font: {
+      size: 1.3rem;
+      weight: 700;
+    }
+  }
+
+  &__SourceLabel {
+    display: block;
+    width: 160px;
+    margin: {
+      top: 0.5em;
+    }
+
+    font: {
+      weight: 700;
+    }
+
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+
+  &__ScreenShareContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: {
+      top: 1em;
+    }
+  }
+}

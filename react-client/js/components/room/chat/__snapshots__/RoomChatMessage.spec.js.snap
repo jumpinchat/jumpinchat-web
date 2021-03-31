@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoomChatMessage /> chat message should append "admin" badge if message is from an admin user 1`] = `
+<div
+  className="chat__Message foo"
+>
+  <div
+    className="chat__MessageBody"
+  >
+    <span
+      className="chat__MessageHandle"
+      onClick={[Function]}
+      role="link"
+      tabIndex="-1"
+    >
+      <strong>
+        bar
+      </strong>
+      <span
+        className="badge badge--blue"
+      >
+        admin
+      </span>
+    </span>
+    <FormattedMessage
+      status={false}
+      text="foo"
+    />
+  </div>
+  <Memo(Timestamp)
+    timestamp={2017-03-12T22:09:59.419Z}
+  />
+</div>
+`;
+
+exports[`<RoomChatMessage /> chat message should append "site mod" badge if message is from site mod 1`] = `
+<div
+  className="chat__Message foo"
+>
+  <div
+    className="chat__MessageBody"
+  >
+    <span
+      className="chat__MessageHandle"
+      onClick={[Function]}
+      role="link"
+      tabIndex="-1"
+    >
+      <strong>
+        bar
+      </strong>
+      <span
+        className="badge badge--blue"
+      >
+        site mod
+      </span>
+    </span>
+    <FormattedMessage
+      status={false}
+      text="foo"
+    />
+  </div>
+  <Memo(Timestamp)
+    timestamp={2017-03-12T22:09:59.419Z}
+  />
+</div>
+`;
+
+exports[`<RoomChatMessage /> chat message should contain correct message 1`] = `
+<div
+  className="chat__Message foo"
+>
+  <div
+    className="chat__MessageBody"
+  >
+    <span
+      className="chat__MessageHandle"
+      onClick={[Function]}
+      role="link"
+      tabIndex="-1"
+    >
+      <strong>
+        bar
+      </strong>
+    </span>
+    <FormattedMessage
+      status={false}
+      text="foo"
+    />
+  </div>
+  <Memo(Timestamp)
+    timestamp={2017-03-12T22:09:59.419Z}
+  />
+</div>
+`;
+
+exports[`<RoomChatMessage /> chat message should only show "admin" badge 1`] = `
+<div
+  className="chat__Message foo"
+>
+  <div
+    className="chat__MessageBody"
+  >
+    <span
+      className="chat__MessageHandle"
+      onClick={[Function]}
+      role="link"
+      tabIndex="-1"
+    >
+      <strong>
+        bar
+      </strong>
+      <span
+        className="badge badge--blue"
+      >
+        admin
+      </span>
+    </span>
+    <FormattedMessage
+      status={false}
+      text="foo"
+    />
+  </div>
+  <Memo(Timestamp)
+    timestamp={2017-03-12T22:09:59.419Z}
+  />
+</div>
+`;

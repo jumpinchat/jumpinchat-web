@@ -1,0 +1,106 @@
+:root {
+  --focus-color: rgb(77, 144, 254);
+}
+
+$headerHeight: 35px;
+$wideChatWidth: 60rem;
+
+$bp-01: 320px;
+$bp-02: 640px;
+$bp-height-01: 480px;
+
+$white: #FFFFFF;
+$offWhite: #F7F7F7;
+
+$grey: #DFDFDF;
+
+$black-01: #3C434C;
+$black-02: #49535F;
+$black-03: #5A6370;
+$black-04: #7C8794;
+$black-05: #939AA3;
+$black-06: #ACB5BF;
+$black-07: #C7CFD9;
+$black-08: #DADFE5;
+$black-09: #E7ECF2;
+$black-10: #FAFAFA;
+
+$green-01: #527C1A;
+$green-02: #7DA73A;
+$green-03: #AACC6B;
+$green-04: #D3F29F;
+$green-05: #FAFFF0;
+
+$orange-01: #BF520E;
+$orange-02: #E68127;
+$orange-03: #F1985B;
+$orange-04: #FFF5EC;
+
+$yellow-01: #E7AA0A;
+$yellow-02: #F5B91B;
+$yellow-03: #FFDC00;
+
+$red-01: #B65053;
+$red-02: #CD6166;
+$red-03: #E59699;
+$red-04: #FEF3F5;
+
+$muted: #999999;
+
+$color-blue-01: #02627D;
+$color-blue-02: #1B8CB5;
+$color-blue-03: #22ADD5;
+$color-blue-04: #57D0F2;
+$color-blue-05: #A1E4F7;
+$color-blue-06: #E0F8FF;
+
+$color-success: #00b760;
+$color-warning: #fcb514;
+$color-danger: #e87511;
+$color-error: #7c211e;
+
+$color-theme-dark: #282828;
+
+$color-dark0-hard: #1d2021;
+$color-dark0: #282828;
+$color-dark0-soft: #32302f;
+$color-dark1: #3c3836;
+$color-dark2: #504945;
+$color-dark3: #665c54;
+$color-dark4: #7c6f64;
+
+$color-gray-245: #928374;
+
+$color-light0-hard: #f9f5d7;
+$color-light0: #fbf1c7;
+$color-light0-soft: #f2e5bc;
+$color-light1: #ebdbb2;
+$color-light2: #d5c4a1;
+$color-light3: #bdae93;
+$color-light4: #a89984;
+
+$theme-red: #e24740;
+$theme-green: #98971a;
+$theme-yellow: #d79921;
+$theme-blue: #458588;
+$theme-purple: #b16286;
+$theme-aqua: #689d6a;
+$theme-orange: #d65d0e;
+
+// dark
+$theme-bright-red: #FB6857;
+$theme-bright-green: #b8bb26;
+$theme-bright-yellow: #fabd2f;
+$theme-bright-blue: #83a598;
+$theme-bright-purple: #d3869b;
+$theme-bright-aqua: #8ec07c;
+$theme-bright-orange: #fe8019;
+
+// light
+$theme-faded-red: #FC7364;
+$theme-faded-green: #79740e;
+$theme-faded-yellow: #b57614;
+$theme-faded-blue: #076678;
+$theme-faded-purple: #8f3f71;
+$theme-faded-aqua: #427b58;
+$theme-faded-orange: #af3a03;

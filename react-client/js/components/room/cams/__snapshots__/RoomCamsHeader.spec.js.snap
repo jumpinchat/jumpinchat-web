@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RoomCamsHeader /> room info should not show room description if none exists 1`] = `
+<div
+  className="cams__Header"
+>
+  <div
+    className="cams__RoomInfo"
+  >
+    <h2
+      className="cams__RoomName"
+    >
+      room
+    </h2>
+    <div
+      className="cams__InfoWrapper cams__StreamCountWrapper"
+    >
+      <span
+        className="cams__InfoCount cams__StreamCount"
+      >
+        3
+      </span>
+      <span
+        className="cams__InfoLabel cams__StreamCountLabel"
+      >
+        cams
+      </span>
+    </div>
+    <div
+      className="cams__InfoWrapper cams__ViewerCountWrapper"
+    >
+      <span
+        className="cams__InfoCount cams__ViewerCount"
+      >
+        4
+      </span>
+      <span
+        className="cams__InfoLabel cams__ViewerCountLabel"
+      >
+        viewers
+      </span>
+    </div>
+    <RoomRestrictions
+      restrictions={
+        Object {
+          "ageRestricted": false,
+          "forceUser": undefined,
+          "public": undefined,
+          "requiresPassword": undefined,
+          "requiresVerifiedEmail": undefined,
+        }
+      }
+    />
+  </div>
+  <div
+    className="cams__HeaderActions"
+  >
+    <RoomBroadcastButton
+      canBroadcast={true}
+      feedCount={3}
+      localStream={
+        Object {
+          "stream": Object {
+            "getAudioTracks": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": Array [],
+                },
+              ],
+            },
+          },
+        }
+      }
+      roomName="room"
+    />
+  </div>
+</div>
+`;
+
+exports[`<RoomCamsHeader /> room info should show room description if one exists 1`] = `
+<div
+  className="cams__Header"
+>
+  <div
+    className="cams__RoomInfo"
+  >
+    <h2
+      className="cams__RoomName"
+    >
+      room
+    </h2>
+    <div
+      className="cams__InfoWrapper cams__StreamCountWrapper"
+    >
+      <span
+        className="cams__InfoCount cams__StreamCount"
+      >
+        3
+      </span>
+      <span
+        className="cams__InfoLabel cams__StreamCountLabel"
+      >
+        cams
+      </span>
+    </div>
+    <div
+      className="cams__InfoWrapper cams__ViewerCountWrapper"
+    >
+      <span
+        className="cams__InfoCount cams__ViewerCount"
+      >
+        4
+      </span>
+      <span
+        className="cams__InfoLabel cams__ViewerCountLabel"
+      >
+        viewers
+      </span>
+    </div>
+    <RoomRestrictions
+      restrictions={
+        Object {
+          "ageRestricted": false,
+          "forceUser": undefined,
+          "public": undefined,
+          "requiresPassword": undefined,
+          "requiresVerifiedEmail": undefined,
+        }
+      }
+    />
+    <div
+      className="cams__RoomDescriptionWrapper mobileHidden"
+      title="foo"
+    >
+      <ClampLines
+        buttons={false}
+        className="cams__RoomDescription"
+        delay={300}
+        ellipsis="…"
+        innerClassName="inner-card"
+        lessText="Read less"
+        lines={2}
+        moreText="Read more"
+        text="foo"
+      />
+    </div>
+  </div>
+  <div
+    className="cams__HeaderActions"
+  >
+    <RoomBroadcastButton
+      canBroadcast={true}
+      feedCount={3}
+      localStream={
+        Object {
+          "stream": Object {
+            "getAudioTracks": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": Array [],
+                },
+              ],
+            },
+          },
+        }
+      }
+      roomName="room"
+    />
+  </div>
+</div>
+`;
+
+exports[`<RoomCamsHeader /> room info should show topic if topic set 1`] = `
+<div
+  className="cams__Header"
+>
+  <div
+    className="cams__RoomInfo"
+  >
+    <h2
+      className="cams__RoomName"
+    >
+      room
+    </h2>
+    <div
+      className="cams__InfoWrapper cams__StreamCountWrapper"
+    >
+      <span
+        className="cams__InfoCount cams__StreamCount"
+      >
+        3
+      </span>
+      <span
+        className="cams__InfoLabel cams__StreamCountLabel"
+      >
+        cams
+      </span>
+    </div>
+    <div
+      className="cams__InfoWrapper cams__ViewerCountWrapper"
+    >
+      <span
+        className="cams__InfoCount cams__ViewerCount"
+      >
+        4
+      </span>
+      <span
+        className="cams__InfoLabel cams__ViewerCountLabel"
+      >
+        viewers
+      </span>
+    </div>
+    <RoomRestrictions
+      restrictions={
+        Object {
+          "ageRestricted": false,
+          "forceUser": undefined,
+          "public": undefined,
+          "requiresPassword": undefined,
+          "requiresVerifiedEmail": undefined,
+        }
+      }
+    />
+    <div
+      className="cams__RoomDescriptionWrapper mobileHidden"
+      title="such topic"
+    >
+      <ClampLines
+        buttons={false}
+        className="cams__RoomDescription"
+        delay={300}
+        ellipsis="…"
+        innerClassName="inner-card"
+        lessText="Read less"
+        lines={2}
+        moreText="Read more"
+        text="such topic"
+      />
+    </div>
+  </div>
+  <div
+    className="cams__HeaderActions"
+  >
+    <RoomBroadcastButton
+      canBroadcast={true}
+      feedCount={3}
+      localStream={
+        Object {
+          "stream": Object {
+            "getAudioTracks": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": Array [],
+                },
+              ],
+            },
+          },
+        }
+      }
+      roomName="room"
+    />
+  </div>
+</div>
+`;
+
+exports[`<RoomCamsHeader /> room info should show topic instead of description if set 1`] = `
+<div
+  className="cams__Header"
+>
+  <div
+    className="cams__RoomInfo"
+  >
+    <h2
+      className="cams__RoomName"
+    >
+      room
+    </h2>
+    <div
+      className="cams__InfoWrapper cams__StreamCountWrapper"
+    >
+      <span
+        className="cams__InfoCount cams__StreamCount"
+      >
+        3
+      </span>
+      <span
+        className="cams__InfoLabel cams__StreamCountLabel"
+      >
+        cams
+      </span>
+    </div>
+    <div
+      className="cams__InfoWrapper cams__ViewerCountWrapper"
+    >
+      <span
+        className="cams__InfoCount cams__ViewerCount"
+      >
+        4
+      </span>
+      <span
+        className="cams__InfoLabel cams__ViewerCountLabel"
+      >
+        viewers
+      </span>
+    </div>
+    <RoomRestrictions
+      restrictions={
+        Object {
+          "ageRestricted": false,
+          "forceUser": undefined,
+          "public": undefined,
+          "requiresPassword": undefined,
+          "requiresVerifiedEmail": undefined,
+        }
+      }
+    />
+    <div
+      className="cams__RoomDescriptionWrapper mobileHidden"
+      title="such topic"
+    >
+      <ClampLines
+        buttons={false}
+        className="cams__RoomDescription"
+        delay={300}
+        ellipsis="…"
+        innerClassName="inner-card"
+        lessText="Read less"
+        lines={2}
+        moreText="Read more"
+        text="such topic"
+      />
+    </div>
+  </div>
+  <div
+    className="cams__HeaderActions"
+  >
+    <RoomBroadcastButton
+      canBroadcast={true}
+      feedCount={3}
+      localStream={
+        Object {
+          "stream": Object {
+            "getAudioTracks": [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+              "results": Array [
+                Object {
+                  "type": "return",
+                  "value": Array [],
+                },
+              ],
+            },
+          },
+        }
+      }
+      roomName="room"
+    />
+  </div>
+</div>
+`;

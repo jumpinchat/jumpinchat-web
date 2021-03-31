@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PmConversationList /> should highlight current conversation 1`] = `
+<ForwardRef
+  className="privateMessages__ListWrapper chat__UserList"
+  horizontal={false}
+>
+  <PmListItem
+    closeConversation={[MockFunction]}
+    disabled={false}
+    handleClickOutside={[MockFunction]}
+    menuOpen={null}
+    openMenu={[MockFunction]}
+    selectConversation={[MockFunction]}
+    selectedConversation="foo"
+    unreadMessages={0}
+    user={
+      Object {
+        "userListId": "foo",
+      }
+    }
+  />
+  <PmListItem
+    closeConversation={[MockFunction]}
+    disabled={false}
+    handleClickOutside={[MockFunction]}
+    menuOpen={null}
+    openMenu={[MockFunction]}
+    selectConversation={[MockFunction]}
+    selectedConversation="foo"
+    unreadMessages={0}
+    user={
+      Object {
+        "userListId": "bar",
+      }
+    }
+  />
+</ForwardRef>
+`;
+
+exports[`<PmConversationList /> should render list of conversations 1`] = `
+<ForwardRef
+  className="privateMessages__ListWrapper chat__UserList"
+  horizontal={false}
+>
+  <PmListItem
+    closeConversation={[MockFunction]}
+    disabled={false}
+    handleClickOutside={[MockFunction]}
+    menuOpen={null}
+    openMenu={[MockFunction]}
+    selectConversation={[MockFunction]}
+    selectedConversation="convo"
+    unreadMessages={0}
+    user={
+      Object {
+        "userListId": "foo",
+      }
+    }
+  />
+  <PmListItem
+    closeConversation={[MockFunction]}
+    disabled={false}
+    handleClickOutside={[MockFunction]}
+    menuOpen={null}
+    openMenu={[MockFunction]}
+    selectConversation={[MockFunction]}
+    selectedConversation="convo"
+    unreadMessages={0}
+    user={
+      Object {
+        "userListId": "bar",
+      }
+    }
+  />
+</ForwardRef>
+`;

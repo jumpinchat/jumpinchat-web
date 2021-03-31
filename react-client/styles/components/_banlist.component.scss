@@ -1,0 +1,71 @@
+.dark {
+  .banlist {
+    &__Item {
+      & + .banlist__Item {
+        border-color: var(--color-dark3);
+      }
+    }
+  }
+}
+
+.banlist {
+  &__List {
+    overflow-y: auto;
+  }
+
+  &__Empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__EmptyImg {
+    max-width: 200px;
+    margin: {
+      top: 14vh;
+    }
+  }
+
+  &__EmptyLabel {
+    margin: {
+      top: 1em;
+    }
+    color: $black-05;
+  }
+
+
+  &__Item {
+    display: flex;
+    position: relative;
+    padding: 0.5em 0;
+    justify-content: space-between;
+    align-items: center;
+
+    & + & {
+      border-top: 1px solid $black-09;
+    }
+  }
+
+  &__Details {
+
+  }
+
+  &__Handle {
+    font: {
+      size: 1.2em;
+      weight: 700;
+    }
+  }
+
+  &__Timestamp {
+    color: $black-05;
+  }
+
+  &__Actions {
+    display: flex;
+    align-items: center;
+    padding: {
+      right: 0.5em;
+    }
+  }
+}

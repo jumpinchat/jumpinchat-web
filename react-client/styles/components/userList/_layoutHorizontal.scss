@@ -1,0 +1,12 @@
+.chat {
+  &__UserList {
+    height: auto;
+    width: 20rem;
+    border-inline-start: {
+      width: 1px;
+      style: solid;
+      color: $black-08;
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+.modal {
+  --bg-color: #{$color-dark2};
+
+  &__Header {
+    background: {
+      color: $color-dark4;
+    }
+  }
+
+  &__Footer {
+    background: {
+      color: $color-dark2;
+    }
+  }
+
+  &__SubText {
+    color: $color-light4;
+  }
+}
+
+

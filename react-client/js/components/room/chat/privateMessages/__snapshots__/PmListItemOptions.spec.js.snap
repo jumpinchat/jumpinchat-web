@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PmListItemOptions /> should not show the menu if menuOpen is false 1`] = `
+<TetherComponent
+  attachment="top center"
+  constraints={
+    Array [
+      Object {
+        "attachment": "together",
+        "to": "scrollParent",
+      },
+      Object {
+        "attachment": "together",
+        "pin": true,
+        "to": "window",
+      },
+    ]
+  }
+  renderElementTag="div"
+  renderElementTo={null}
+>
+  <button
+    className="userList__Action"
+    onClick={[MockFunction]}
+    type="button"
+  >
+    <i
+      aria-hidden="true"
+      className="fa fa-ellipsis-h"
+    />
+  </button>
+</TetherComponent>
+`;
+
+exports[`<PmListItemOptions /> should show the menu if menuOpen is true 1`] = `
+<TetherComponent
+  attachment="top center"
+  constraints={
+    Array [
+      Object {
+        "attachment": "together",
+        "to": "scrollParent",
+      },
+      Object {
+        "attachment": "together",
+        "pin": true,
+        "to": "window",
+      },
+    ]
+  }
+  renderElementTag="div"
+  renderElementTo={null}
+>
+  <button
+    className="userList__Action"
+    onClick={[MockFunction]}
+    type="button"
+  >
+    <i
+      aria-hidden="true"
+      className="fa fa-ellipsis-h"
+    />
+  </button>
+  <clickOutside(ListItems)
+    onClickOutside={[MockFunction]}
+    options={
+      Array [
+        Object {
+          "element": "div",
+          "props": Object {
+            "className": "dropdown__Option dropdown__Option-header",
+          },
+          "text": "Conversation with foo",
+        },
+        Object {
+          "element": "button",
+          "props": Object {
+            "onClick": [Function],
+          },
+          "text": "Close conversation",
+        },
+      ]
+    }
+  />
+</TetherComponent>
+`;

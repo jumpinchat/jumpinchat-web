@@ -1,0 +1,60 @@
+@keyframes pill-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pill {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  min-width: 20px;
+  padding: 0 0.25em;
+  background: $black-07;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: $black-03;
+  font: {
+    weight: 700;
+    size: 1.2rem;
+  }
+  line-height: 1;
+
+
+  &--default {
+    background: $black-04;
+    color: $white;
+  }
+
+  &--blue {
+    background: $color-blue-02;
+    color: $white;
+  }
+
+  &--red {
+    background: $red-02;
+    color: $white;
+  }
+
+  &--white {
+    background: $white;
+    color: $color-blue-02;
+  }
+
+  &--animated {
+    animation-name: pill-pulse;
+    animation-duration: 0.075s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+}

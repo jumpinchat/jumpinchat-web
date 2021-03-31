@@ -1,0 +1,163 @@
+.chat {
+  background: {
+    color: $color-dark0;
+  }
+
+  &__Header {
+    background: {
+      color: $color-dark2;
+    }
+  }
+
+  &__FeedWrapper {
+    background: {
+      color: $color-dark1;
+    }
+  }
+
+  &__Feed {
+    border: {
+      color: $color-dark2;
+    }
+  }
+
+  &__Message {
+    &.redlt {
+      color: $theme-bright-red;
+    }
+
+    &.greenalt {
+      color: $theme-bright-green;
+    }
+
+    &.yellowalt {
+      color: $theme-bright-yellow;
+    }
+
+    &.bluealt {
+      color: $theme-bright-blue;
+    }
+
+    &.purplealt {
+      color: $theme-bright-purple;
+    }
+
+    &.aquaalt {
+      color: $theme-bright-aqua;
+    }
+
+    &.orangealt {
+      color: $theme-bright-orange;
+    }
+  }
+
+  &__MessageBody {
+    &-status {
+      color: $color-light0;
+    }
+
+    &-info {
+      color: $color-blue-03;
+    }
+
+    &-success {
+      color: $green-01;
+    }
+
+    &-alert {
+      color: $orange-02;
+    }
+
+    &-warning {
+      color: $red-01;
+    }
+
+    &-error {
+      color: $red-01;
+    }
+  }
+
+  &__MessageTimestamp {
+    color: $color-light4;
+  }
+
+  &__Message:hover .chat__MessageTimestamp {
+    color: $color-light2;
+  }
+
+  &__InputWrapper {
+    border: {
+      color: $color-dark3;
+    }
+
+    &:focus-within {
+      border-color: $color-dark4;
+    }
+
+    background: {
+      color: $color-dark2;
+    }
+  }
+
+  &__Input {
+    background: {
+      color: transparent;
+    }
+
+    &::placeholder {
+      color: $color-light4;
+    }
+  }
+
+  &__InputAction {
+    border: {
+      color: $color-dark2;
+    }
+
+    &.button {
+      color: $color-blue-03;
+
+      &:hover {
+        color: $color-blue-04;
+      }
+    }
+  }
+
+  &__ShareCopy {
+    background-color: $color-light4;
+
+    &:hover {
+      background-color: $color-light3;
+    }
+  }
+
+  &__Color {
+    &-redalt {
+      background-color: $theme-bright-red;
+    }
+
+    &-greenalt {
+      background-color: $theme-bright-green;
+    }
+
+    &-yellowalt {
+      background-color: $theme-bright-yellow;
+    }
+
+    &-bluealt {
+      background-color: $theme-bright-blue;
+    }
+
+    &-purplealt {
+      background-color: $theme-bright-purple;
+    }
+
+    &-aquaalt {
+      background-color: $theme-bright-aqua;
+    }
+
+    &-orangealt {
+      background-color: $theme-bright-orange;
+    }
+  }
+}

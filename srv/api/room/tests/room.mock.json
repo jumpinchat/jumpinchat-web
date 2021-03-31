@@ -1,0 +1,166 @@
+{
+  "_id": "560058276354652c31b88138",
+  "name": "room",
+  "__v": 2,
+  "settings": {
+    "moderators": [
+      {
+        "_id": "1",
+        "user_id": "560058276354652c31b88139",
+        "username": "mod",
+        "session_token": "y9VC65Fqtvonv5LFAAAD",
+        "timestamp": "Wed Sep 23 2015 21:56:40 GMT+0100 (GMT Summer Time)",
+        "permissions": {
+          "ban": true,
+          "close_cam": true,
+          "mute_user_audio": true,
+          "mute_user_chat": true,
+          "mute_room_chat": true,
+          "mute_room_audio": true,
+          "apply_password": false,
+          "assign_operator": false
+        }
+      },
+      {
+        "_id": "3",
+        "user_id": "mod",
+        "username": "mod",
+        "session_token": "CIYAFaZSRpCWGwWyAAAC",
+        "timestamp": "Wed Sep 23 2015 21:56:40 GMT+0100 (GMT Summer Time)",
+        "permissions": {
+          "ban": true,
+          "close_cam": true,
+          "mute_user_audio": true,
+          "mute_user_chat": true,
+          "mute_room_chat": true,
+          "mute_room_audio": true,
+          "apply_password": false,
+          "assign_operator": false
+        }
+      },
+      {
+        "_id": "ownerop",
+        "user_id": "owneruser",
+        "username": "owner",
+        "session_token": "ownersession",
+        "timestamp": "Wed Sep 23 2015 21:56:40 GMT+0100 (GMT Summer Time)",
+        "permissions": {
+          "ban": true,
+          "close_cam": true,
+          "mute_user_audio": true,
+          "mute_user_chat": true,
+          "mute_room_chat": true,
+          "mute_room_audio": true,
+          "apply_password": false,
+          "assign_operator": false
+        }
+      },
+      {
+        "_id": "guestmod",
+        "user_id": "guestmod",
+        "session_token": "guestmodsession",
+        "timestamp": "Wed Sep 23 2015 21:56:40 GMT+0100 (GMT Summer Time)",
+        "permissions": {
+          "ban": true,
+          "close_cam": true,
+          "mute_user_audio": true,
+          "mute_user_chat": true,
+          "mute_room_chat": true,
+          "mute_room_audio": true,
+          "apply_password": false,
+          "assign_operator": false
+        }
+      }
+    ],
+    "passhash": false
+  },
+  "users": [
+    {
+      "handle": "guest-414534",
+      "ip": "::ffff:95.149.79.250",
+      "signature": "superawesomesignaturebro",
+      "color": "#10a879",
+      "_id": "560058276354652c31b88139",
+      "operator_id": "1",
+      "socket_id": "y9VC65Fqtvonv5LFAAAD",
+      "session_id": "y9VC65Fqtvonv5LFAAAD",
+      "user_id": "56a2a3bdab2de08c2aa998fa",
+      "isAdmin": false
+    },
+    {
+      "handle": "guest-389948",
+      "ip": "::ffff:95.149.79.250",
+      "signature": "superawesomesignaturebro",
+      "color": "#8e3901",
+      "_id": "5601cd64fd74f7a83a2854c6",
+      "operator_id": null,
+      "socket_id": "CIYAFaZSRpCWGwWyAAAC",
+      "session_id": "CIYAFaZSRpCWGwWyAAAC",
+      "user_id": null,
+      "isAdmin": false
+    },
+    {
+      "handle": "owner",
+      "ip": "ownerip",
+      "signature": "superawesomesignaturebro",
+      "color": "#8e3901",
+      "_id": "ownerid",
+      "operator_id": "ownerop",
+      "socket_id": "ownersocket",
+      "session_id": "ownersession",
+      "user_id": "owneruser",
+      "isAdmin": false
+    },
+    {
+      "handle": "admin",
+      "ip": "::ffff:95.149.79.211",
+      "signature": "superawesomesignaturebro",
+      "color": "#8e3901",
+      "_id": "5601cd64fd74f7a83a2854c7",
+      "operator_id": null,
+      "socket_id": "CIYAFaZSRpCWGwWyAAAD",
+      "session_id": "CIYAFaZSRpCWGwWyAAAE",
+      "user_id": "123",
+      "isAdmin": true
+    },
+    {
+      "handle": "registered",
+      "ip": "registeredip",
+      "signature": "superawesomesignaturebro",
+      "color": "#8e3901",
+      "_id": "registeredid",
+      "operator_id": null,
+      "socket_id": "registeredsocket",
+      "session_id": "registeredsession",
+      "user_id": "registereduser",
+      "isAdmin": false
+    },
+    {
+      "handle": "guest",
+      "ip": "guest",
+      "signature": "superawesomesignaturebro",
+      "color": "#8e3901",
+      "_id": "guest",
+      "operator_id": null,
+      "socket_id": "guest",
+      "session_id": "guest",
+      "isAdmin": false
+    }
+  ],
+  "banlist": [
+    {
+      "ip": "1.2.3.5",
+      "signature": "banned",
+      "timestamp": "Wed Sep 23 2015 21:56:40 GMT+0100 (GMT Summer Time)"
+    }
+  ],
+  "attrs": {
+    "creation_ip": "::ffff:95.149.79.250",
+    "janus_id": 245867927,
+    "is_user_room": false,
+    "last_accessed": "Wed Sep 23 2015 21:56:40 GMT+0100 (GMT Summer Time)",
+    "created": "Wed Sep 23 2015 21:56:40 GMT+0100 (GMT Summer Time)",
+    "active": true,
+    "owner": "owneruser"
+  }
+}

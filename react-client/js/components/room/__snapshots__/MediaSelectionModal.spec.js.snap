@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MediaSelectionModal /> video audio sources should not show PTT button if forcePtt is true 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal__Window"
+  closeTimeoutMS={0}
+  contentLabel="Media selection modal"
+  isOpen={false}
+  onRequestClose={[Function]}
+  overlayClassName="modal"
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <div
+    className="modal__Header"
+  >
+    Choose 
+    audio
+     source
+    <button
+      className="modal__Button modal__Button-close"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fa fa-times"
+      />
+    </button>
+  </div>
+  <div
+    className="modal__Body modal__Body--noPadding"
+  >
+    <React.Fragment>
+      <React.Fragment>
+        <ForwardRef
+          className="scroll-shadow mediaSources__SourceListWrapper"
+          contentClassName="mediaSources__SourceList"
+          contentStyle={
+            Object {
+              "paddingBottom": "0.25em",
+            }
+          }
+          horizontal={false}
+        >
+          <MediaSource
+            device={
+              Object {
+                "deviceId": "123",
+                "label": "foo",
+              }
+            }
+            isGold={false}
+            onSelectDevice={[Function]}
+            type="audio"
+            videoQuality={
+              Object {
+                "dimensions": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "frameRate": 69,
+                "id": "foo",
+              }
+            }
+          />
+          <MediaSource
+            device={
+              Object {
+                "deviceId": "321",
+                "label": "bar",
+              }
+            }
+            isGold={false}
+            onSelectDevice={[Function]}
+            type="audio"
+            videoQuality={
+              Object {
+                "dimensions": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "frameRate": 69,
+                "id": "foo",
+              }
+            }
+          />
+        </ForwardRef>
+        <div
+          className="mediaSources__ScreenShareContainer"
+        >
+          <Switch
+            checked={true}
+            disabled={true}
+            helpText={null}
+            id="mediaPttCheckbox"
+            label="Push to talk"
+            onChange={[Function]}
+          />
+          <span
+            className="modal__SubText"
+          >
+            Push-to-talk is forced in this room
+          </span>
+        </div>
+      </React.Fragment>
+      <div
+        className="modal__SubText"
+      >
+        Inappropriate broadcasts will be terminated as per the
+         
+        <a
+          href="/terms"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          terms and conditions
+        </a>
+      </div>
+    </React.Fragment>
+  </div>
+</Modal>
+`;
+
+exports[`<MediaSelectionModal /> video audio sources should show PTT button if forcePtt is false 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal__Window"
+  closeTimeoutMS={0}
+  contentLabel="Media selection modal"
+  isOpen={false}
+  onRequestClose={[Function]}
+  overlayClassName="modal"
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <div
+    className="modal__Header"
+  >
+    Choose 
+    audio
+     source
+    <button
+      className="modal__Button modal__Button-close"
+      onClick={[Function]}
+      type="button"
+    >
+      <i
+        className="fa fa-times"
+      />
+    </button>
+  </div>
+  <div
+    className="modal__Body modal__Body--noPadding"
+  >
+    <React.Fragment>
+      <React.Fragment>
+        <ForwardRef
+          className="scroll-shadow mediaSources__SourceListWrapper"
+          contentClassName="mediaSources__SourceList"
+          contentStyle={
+            Object {
+              "paddingBottom": "0.25em",
+            }
+          }
+          horizontal={false}
+        >
+          <MediaSource
+            device={
+              Object {
+                "deviceId": "123",
+                "label": "foo",
+              }
+            }
+            isGold={false}
+            onSelectDevice={[Function]}
+            type="audio"
+            videoQuality={
+              Object {
+                "dimensions": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "frameRate": 69,
+                "id": "foo",
+              }
+            }
+          />
+          <MediaSource
+            device={
+              Object {
+                "deviceId": "321",
+                "label": "bar",
+              }
+            }
+            isGold={false}
+            onSelectDevice={[Function]}
+            type="audio"
+            videoQuality={
+              Object {
+                "dimensions": Object {
+                  "height": 2,
+                  "width": 1,
+                },
+                "frameRate": 69,
+                "id": "foo",
+              }
+            }
+          />
+        </ForwardRef>
+        <div
+          className="mediaSources__ScreenShareContainer"
+        >
+          <Switch
+            checked={true}
+            disabled={false}
+            helpText={null}
+            id="mediaPttCheckbox"
+            label="Push to talk"
+            onChange={[Function]}
+          />
+        </div>
+      </React.Fragment>
+      <div
+        className="modal__SubText"
+      >
+        Inappropriate broadcasts will be terminated as per the
+         
+        <a
+          href="/terms"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          terms and conditions
+        </a>
+      </div>
+    </React.Fragment>
+  </div>
+</Modal>
+`;

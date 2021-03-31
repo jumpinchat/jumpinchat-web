@@ -1,0 +1,492 @@
+.dark {
+  .settings {
+    --border: #{$color-dark0};
+    --menu-bg: #{$color-dark1};
+    --menu-item-hover: #{rgba(255,255,255,0.15)};
+    --control-bg: #{$color-dark3};
+    --control-selected: #{$color-light0};
+    --control-selected-bg: #{$color-blue-02};
+    --chat-preview-bg: #{$color-dark2};
+    &__Color {
+      &-redalt {
+        background-color: $theme-bright-red;
+      }
+
+      &-greenalt {
+        background-color: $theme-bright-green;
+      }
+
+      &-yellowalt {
+        background-color: $theme-bright-yellow;
+      }
+
+      &-bluealt {
+        background-color: $theme-bright-blue;
+      }
+
+      &-purplealt {
+        background-color: $theme-bright-purple;
+      }
+
+      &-aquaalt {
+        background-color: $theme-bright-aqua;
+      }
+
+      &-orangealt {
+        background-color: $theme-bright-orange;
+      }
+    }
+  }
+}
+
+.settings {
+  --border: #{$black-08};
+  --menu-bg: #{$black-08};
+  --menu-item-hover: #{rgba(0,0,0,0.15)};
+  --control-bg: #{$white};
+  --control-selected: #{$color-light0};
+  --control-selected-bg: #{$color-blue-02};
+  --chat-preview-bg: #{$white};
+
+  font: {
+    size: 1.4rem;
+  }
+
+  &__PopOver {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    overflow: hidden;
+    outline: none;
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      width: 90%;
+      height: 90vh;
+    }
+  }
+
+  &__Body {
+    display: flex;
+    flex-grow: 1;
+    padding: 0;
+    position: relative;
+    height: 100%;
+  }
+
+  &__Close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__CloseButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 2px solid currentColor;
+    font: {
+      size: 2em;
+    }
+
+    border-radius: 50%;
+    opacity: 0.7;
+
+    transition: opacity 125ms ease-out;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__CloseLabel {
+    margin: {
+      top: 0.5em;
+    }
+
+    font: {
+      size: 0.85em;
+    }
+
+    opacity: 0.7;
+    text-transform: uppercase;
+  }
+
+  &__MobileMenu {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      display: none;
+    }
+  }
+
+  &__MobileMenuButton {
+    font: {
+      size: 1.5em;
+    }
+  }
+
+
+  &__Title {
+    margin: {
+      top: 1em;
+      bottom: 0.5em;
+    }
+
+    font: {
+      size: 0.85em;
+      weight: 600;
+      family: 'Fira Sans', sans-serif;
+    }
+
+    color: currentColor;
+    opacity: 0.7;
+
+    text-transform: uppercase;
+  }
+
+  &__MenuTitle {
+    margin: {
+      top: 2em;
+    }
+
+    padding-inline: {
+      start: 0.5em;
+    }
+
+    &:first-of-type {
+      margin: {
+        top: 1em;
+      }
+    }
+  }
+
+  &__MenuBackdrop {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      display: none;
+    }
+  }
+
+  &__Menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 125ms ease-out;
+
+    width: 20rem;
+    padding: 0.5em 1em;
+    background-color: var(--menu-bg);
+
+    &--open {
+      transform: translate3d(0, 0, 0);
+    }
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      position: static;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__MenuItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__MenuItem {
+    & + & {
+      margin: {
+        top: 0.25em;
+      }
+    }
+  }
+
+  &__MenuItemButton {
+    width: 100%;
+    padding: 0.5em;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    text-align: left;
+
+    &:hover,
+    &:focus,
+    &--current {
+      background-color: var(--menu-item-hover);
+    }
+
+    &--clear {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 0.5em;
+      padding: calc(0.5em - 1px);
+      border: 1px dashed var(--menu-item-hover);
+      background-color: transparent;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__Page {
+    flex-grow: 1;
+    max-width: 900px;
+    padding: 5em 0.5em 2.5em;
+
+    overflow-y: auto;
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      margin: {
+        right: calc(42px + 1em);
+      }
+      padding: 2.5em 2em 2.5em;
+    }
+  }
+
+  &__PageTitle {
+    margin: {
+      top: 0;
+      bottom: 1em;
+    }
+  }
+
+  &__ChatPreview {
+    width: 100%;
+    max-width: 70ch;
+    min-height: 4em;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid var(--border);
+    box-sizing: border-box;
+    border-radius: 3px;
+    overflow-y: hidden;
+    background-color: var(--chat-preview-bg);
+  }
+
+
+  // inputs
+  &__RadioContainer {
+    display: flex;
+    flex-direction: column;
+    &:focus-within {
+      .settings__Title {
+        &:after {
+          content: '\2022';
+          margin: {
+            left: 0.5em;
+          }
+          line-height: 0.85em;
+          font-size: 1.6rem;
+          color: var(--focus-color);
+          text-shadow: 0 0 4px var(--focus-color);
+        }
+      }
+    }
+  }
+
+  &__RadioElement {
+    padding: 0.5em;
+    border: 1px solid var(--border);
+    background-color: var(--control-bg);
+    font: {
+      size: 1.6rem;
+    }
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+
+    & + & {
+      margin: {
+        top: 0.5em;
+      }
+    }
+
+    input {
+      width: 0;
+      appearance: none;
+    }
+
+    &--checked {
+      border: none;
+      background-color: var(--control-selected-bg);
+      color: var(--control-selected);
+    }
+  }
+
+  &__ColorPicker {
+    $dimensions: 42px;
+    display: grid;
+    grid-template-columns: repeat(7, $dimensions);
+    height: calc(#{$dimensions} * 2);
+  }
+
+  &__ColorPickerOption {
+    $dimensions: 42px;
+    position: relative;
+    flex-grow: 1;
+    box-sizing: border-box;
+    width: $dimensions;
+    height: $dimensions;
+    border: 1px solid $black-04;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($white, 0.15);
+      }
+    }
+
+    & + & {
+      border-left: none;
+    }
+
+    &-active {
+      border: {
+        bottom: 3px solid $color-blue-03;
+      }
+    }
+  }
+
+  &__Color {
+    &-red {
+      background-color: $theme-red;
+    }
+
+    &-green {
+      background-color: $theme-green;
+    }
+
+    &-yellow {
+      background-color: $theme-yellow;
+    }
+
+    &-blue {
+      background-color: $theme-blue;
+    }
+
+    &-purple {
+      background-color: $theme-purple;
+    }
+
+    &-aqua {
+      background-color: $theme-aqua;
+    }
+
+    &-orange {
+      background-color: $theme-orange;
+    }
+
+    &-redalt {
+      background-color: $theme-faded-red;
+    }
+
+    &-greenalt {
+      background-color: $theme-faded-green;
+    }
+
+    &-yellowalt {
+      background-color: $theme-faded-yellow;
+    }
+
+    &-bluealt {
+      background-color: $theme-faded-blue;
+    }
+
+    &-purplealt {
+      background-color: $theme-faded-purple;
+    }
+
+    &-aquaalt {
+      background-color: $theme-faded-aqua;
+    }
+
+    &-orangealt {
+      background-color: $theme-faded-orange;
+    }
+  }
+
+
+  &__TextInputLabelWrapper {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  &__TextInputLabel {
+    margin: {
+      bottom: 0;
+    }
+  }
+
+  &__TextInputWrapper {
+    display: flex;
+  }
+
+  &__TextInputError {
+    margin: {
+      top: 0.25em;
+    }
+  }
+
+  &__TextInput {
+    padding: {
+      top: 0.5em;
+      right: 0.5em;
+      bottom: 0.5em;
+      left: 0.5em;
+    }
+
+    border-radius: 4px;
+
+    &:focus {
+      outline: -webkit-focus-ring-color auto 1px;
+    }
+
+    &--button {
+      border-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      & + .button {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+}
+
+.dragging {
+  .settings__MenuItemButton {
+    border: 1px dashed var(--menu-item-hover);
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      outline: none;
+    }
+  }
+}

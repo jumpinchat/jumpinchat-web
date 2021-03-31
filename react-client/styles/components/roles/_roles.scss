@@ -1,0 +1,116 @@
+.dark {
+  .roles {
+    &__IconPicker {
+      --dropdown-bg: #{$color-dark0};
+    }
+  }
+}
+
+.roles {
+  &__Wrapper {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    width: calc(100% - 42px);
+  }
+
+  &__ListWrapper {
+    margin: {
+      right: 1em;
+    }
+
+    border-right: 1px solid var(--menu-bg);
+  }
+
+  &__List {
+    margin: {
+      left: 0;
+    }
+    padding: {
+      left: 0;
+      right: 1em;
+    }
+    list-style: none;
+  }
+
+  &__ListItem {
+    & + & {
+      margin: {
+        top: 0.5em;
+      }
+    }
+  }
+
+  &__ListItemButton {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__ListItemIcon {
+    cursor: move;
+    opacity: 0.5;
+  }
+
+  &__ColorPicker {
+    display: flex;
+    margin: {
+      top: 1em;
+    }
+  }
+
+  &__IconPicker {
+    --dropdown-bg: #{$black-10};
+    width: 200px;
+    background-color: var(--dropdown-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  &__IconPickerWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+  }
+
+  &__IconPickerAction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(42px * 2 * 1.3);
+    height: calc(42px * 2);
+    margin: {
+      left: 1em;
+    }
+
+    border: 1px solid currentColor;
+    border-radius: 4px;
+  }
+
+  &__IconPickerItem {
+    width: 42px;
+    height: 42px;
+  }
+
+  &__Permissions {
+    margin: {
+      top: 1em;
+    }
+    padding: {
+      top: 1em;
+    }
+
+    border-top: 2px solid var(--menu-bg);
+  }
+
+  &__PermissionGroup {
+    & + & {
+      margin: {
+        top: 3.2rem;
+      }
+    }
+  }
+
+  &__FormButtonToolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}

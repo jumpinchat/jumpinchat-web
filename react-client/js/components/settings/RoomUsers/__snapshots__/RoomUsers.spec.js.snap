@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SettingsRoomUsers /> should filter by role tag 1`] = `
+<div
+  className="settings__Page"
+>
+  <div
+    className="roomUserSettings__Filters"
+  >
+    <ForwardRef
+      changed={false}
+      className="roomUserSettings__Filter"
+      defaultValue={null}
+      error={null}
+      label="Search users"
+      onChange={[Function]}
+      onSubmit={null}
+      subTitle={null}
+      success={false}
+      value=""
+    />
+    <ForwardRef
+      className="roomUserSettings__Filter"
+      error={null}
+      label="Filter by roles"
+      onChange={[Function]}
+      options={
+        Array [
+          Object {
+            "label": "role",
+            "value": "role_tag",
+          },
+          Object {
+            "label": "default",
+            "value": "default",
+          },
+        ]
+      }
+      subTitle={null}
+      value="role_tag"
+    />
+  </div>
+  <ul
+    className="roomUserSettings__List"
+  >
+    <li
+      className="roomUserSettings__ListItem"
+    >
+      <ForwardRef
+        buttonLabel={
+          <FontAwesomeIcon
+            border={false}
+            className=""
+            fixedWidth={false}
+            flip={null}
+            icon={
+              Array [
+                "fas",
+                "plus",
+              ]
+            }
+            inverse={false}
+            listItem={false}
+            mask={null}
+            pull={null}
+            pulse={false}
+            rotation={null}
+            size={null}
+            spin={false}
+            swapOpacity={false}
+            symbol={false}
+            title=""
+            transform={null}
+          />
+        }
+        changed={false}
+        className=""
+        defaultValue={null}
+        disabled={null}
+        error={null}
+        label="Add user by username"
+        onChange={[Function]}
+        onSubmit={[Function]}
+        subTitle={null}
+        success={false}
+        value={null}
+      />
+    </li>
+    <RoomUsersListItem
+      dropdownOpen={false}
+      enrollment={
+        Object {
+          "roles": Array [
+            Object {
+              "enrollmentId": "enrollment",
+              "name": "role",
+              "roleId": "role_id",
+              "tag": "role_tag",
+            },
+            Object {
+              "enrollmentId": "enrollment2",
+              "name": "default",
+              "roleId": "default_id",
+              "tag": "default",
+            },
+          ],
+          "userId": "user_id2",
+          "username": "user2",
+        }
+      }
+      onAddRole={[Function]}
+      onRemoveRole={[Function]}
+      onSetDropdown={[Function]}
+      roles={
+        Array [
+          Object {
+            "name": "role",
+            "tag": "role_tag",
+          },
+        ]
+      }
+    />
+  </ul>
+</div>
+`;
+
+exports[`<SettingsRoomUsers /> should show new user 1`] = `
+<div
+  className="settings__Page"
+>
+  <div
+    className="roomUserSettings__Filters"
+  >
+    <ForwardRef
+      changed={false}
+      className="roomUserSettings__Filter"
+      defaultValue={null}
+      error={null}
+      label="Search users"
+      onChange={[Function]}
+      onSubmit={null}
+      subTitle={null}
+      success={false}
+      value=""
+    />
+    <ForwardRef
+      className="roomUserSettings__Filter"
+      error={null}
+      label="Filter by roles"
+      onChange={[Function]}
+      options={
+        Array [
+          Object {
+            "label": "role",
+            "value": "role_tag",
+          },
+          Object {
+            "label": "default",
+            "value": "default",
+          },
+        ]
+      }
+      subTitle={null}
+      value="default"
+    />
+  </div>
+  <ul
+    className="roomUserSettings__List"
+  >
+    <RoomUsersListItem
+      dropdownOpen={false}
+      enrollment={
+        Object {
+          "roles": Array [
+            Object {
+              "enrollmentId": "enrollment2",
+              "name": "default",
+              "roleId": "default_id",
+              "tag": "default",
+            },
+          ],
+          "userId": "user_id",
+          "username": "user",
+        }
+      }
+      onAddRole={[Function]}
+      onRemoveRole={[Function]}
+      onSetDropdown={[Function]}
+      roles={
+        Array [
+          Object {
+            "name": "role",
+            "tag": "role_tag",
+          },
+        ]
+      }
+    />
+    <RoomUsersListItem
+      dropdownOpen={false}
+      enrollment={
+        Object {
+          "new": true,
+          "roles": Array [],
+          "userId": "foo",
+          "username": "username2",
+        }
+      }
+      onAddRole={[Function]}
+      onRemoveRole={[Function]}
+      onSetDropdown={[Function]}
+      roles={
+        Array [
+          Object {
+            "name": "role",
+            "tag": "role_tag",
+          },
+        ]
+      }
+    />
+  </ul>
+</div>
+`;

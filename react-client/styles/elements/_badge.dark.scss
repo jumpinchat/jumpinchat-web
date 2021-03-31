@@ -1,0 +1,9 @@
+.badge {
+  background-color: $color-dark3;
+  color: $color-light0-soft;
+
+  &--blue {
+    background-color: $theme-blue;
+    color: $color-light0-soft;
+  }
+}

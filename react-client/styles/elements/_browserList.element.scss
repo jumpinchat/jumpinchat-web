@@ -1,0 +1,31 @@
+.browserList {
+  &__List {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin: {
+      top: 6.4rem;
+    }
+
+    list-style: none;
+  }
+
+  &__IconWrapper {
+    width: 64px;
+    text-align: center;
+  }
+
+  &__Link {
+    &,
+    &:visited {
+      color: inherit;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-blue-02;
+    }
+  }
+}

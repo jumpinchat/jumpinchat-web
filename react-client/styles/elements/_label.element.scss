@@ -1,0 +1,23 @@
+.label {
+
+	display: inline-block;
+	padding: 0.15em 0.25em;
+
+	background: $muted;
+
+	color: $white;
+	font-style: normal;
+	line-height: 1;
+
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+
+	border-radius: 2px;
+
+	&-orange {
+		background: $orange-02;
+	}
+
+	&-green {
+		background: $green-02;
+	}
+}

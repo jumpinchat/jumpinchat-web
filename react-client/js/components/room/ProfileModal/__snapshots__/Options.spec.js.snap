@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileOptions render should should show ban button 1`] = `
+<div
+  className="profile__Actions"
+>
+  <h3
+    className="modal__SectionTitle"
+  >
+    User actions
+  </h3>
+  <button
+    className="button button-floating button-outlineBlack profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Ignore
+  </button>
+  <button
+    className="button button-floating button-red profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Report user
+  </button>
+  <React.Fragment>
+    <h3
+      className="modal__SectionTitle"
+    >
+      Moderator actions
+    </h3>
+    <button
+      className="button button-floating button-red profile__Action"
+      onClick={[Function]}
+      type="button"
+    >
+      Ban
+    </button>
+  </React.Fragment>
+</div>
+`;
+
+exports[`ProfileOptions render should should show kick button 1`] = `
+<div
+  className="profile__Actions"
+>
+  <h3
+    className="modal__SectionTitle"
+  >
+    User actions
+  </h3>
+  <button
+    className="button button-floating button-outlineBlack profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Ignore
+  </button>
+  <button
+    className="button button-floating button-red profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Report user
+  </button>
+  <React.Fragment>
+    <h3
+      className="modal__SectionTitle"
+    >
+      Moderator actions
+    </h3>
+    <button
+      className="button button-floating button-red profile__Action"
+      onClick={[Function]}
+      type="button"
+    >
+      Ban
+    </button>
+    <button
+      className="button button-floating button-red profile__Action"
+      onClick={[Function]}
+      type="button"
+    >
+      Kick
+    </button>
+  </React.Fragment>
+</div>
+`;
+
+exports[`ProfileOptions render should should show silence button 1`] = `
+<div
+  className="profile__Actions"
+>
+  <h3
+    className="modal__SectionTitle"
+  >
+    User actions
+  </h3>
+  <button
+    className="button button-floating button-outlineBlack profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Ignore
+  </button>
+  <button
+    className="button button-floating button-red profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Report user
+  </button>
+  <React.Fragment>
+    <h3
+      className="modal__SectionTitle"
+    >
+      Moderator actions
+    </h3>
+    <button
+      className="button button-floating button-red profile__Action"
+      onClick={[Function]}
+      type="button"
+    >
+      Ban
+    </button>
+    <button
+      className="button button-floating button-red profile__Action"
+      onClick={[Function]}
+      type="button"
+    >
+      Silence
+    </button>
+  </React.Fragment>
+</div>
+`;
+
+exports[`ProfileOptions render should show pm button if user is registered 1`] = `
+<div
+  className="profile__Actions"
+>
+  <h3
+    className="modal__SectionTitle"
+  >
+    User actions
+  </h3>
+  <button
+    className="button button-floating button-outlineBlack profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Ignore
+  </button>
+  <button
+    className="button button-floating button-outlineBlack profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Private message
+  </button>
+  <button
+    className="button button-floating button-red profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Report user
+  </button>
+</div>
+`;
+
+exports[`ProfileOptions render should show profile button if profile user is registered 1`] = `
+<div
+  className="profile__Actions"
+>
+  <h3
+    className="modal__SectionTitle"
+  >
+    User actions
+  </h3>
+  <button
+    className="button button-floating button-outlineBlack profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Ignore
+  </button>
+  <a
+    className="button button-floating button-outlineBlack profile__Action"
+    href="/profile/foo"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    Full profile
+  </a>
+  <button
+    className="button button-floating button-red profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Report user
+  </button>
+</div>
+`;
+
+exports[`ProfileOptions render should show unignore button if ignorelistitem exists 1`] = `
+<div
+  className="profile__Actions"
+>
+  <h3
+    className="modal__SectionTitle"
+  >
+    User actions
+  </h3>
+  <button
+    className="button button-floating button-outlineBlack profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Unignore
+  </button>
+  <button
+    className="button button-floating button-red profile__Action"
+    onClick={[Function]}
+    type="button"
+  >
+    Report user
+  </button>
+</div>
+`;

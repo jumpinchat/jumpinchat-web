@@ -1,0 +1,21 @@
+.dropdown {
+  &__Options {
+    background-color: $color-dark2;
+  }
+
+  &__Option {
+    background-color: $color-dark2;
+    border-color: $color-dark3;
+    color: $color-light0;
+
+    &:hover {
+      background-color: $color-dark1;
+    }
+
+    &-header,
+    &-header:hover {
+      color: inherit;
+      background-color: $color-dark4;
+    }
+  }
+}

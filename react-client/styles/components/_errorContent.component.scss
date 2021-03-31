@@ -1,0 +1,22 @@
+.errorContent {
+  &__Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: {
+      top: 10vh;
+    }
+
+    padding: 0 1em;
+  }
+
+  &__Title {
+    font: {
+      family: Dosis, sans-serif;
+      size: 2.5em;
+      weight: 700;
+    }
+    text-align: center;
+  }
+}

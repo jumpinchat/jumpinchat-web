@@ -1,0 +1,53 @@
+module.exports.defaultRoles = {
+  mods: {
+    name: 'Moderators',
+    tag: 'mods',
+    permanent: true,
+    icon: {
+      name: 'star',
+      color: 'yellowalt',
+    },
+    order: 1,
+    permissions: {
+      ban: true,
+      kick: true,
+      closeCam: true,
+      muteUserAudio: true,
+      muteUserChat: true,
+      muteRoomChat: true,
+      muteRoomAudio: true,
+      applyPassword: false,
+      assignOperator: false,
+      assignRoles: false,
+      playMedia: true,
+      controlMedia: true,
+      uploadEmoji: true,
+      roomDetails: true,
+    },
+  },
+  everybody: {
+    name: 'Everybody',
+    tag: 'everybody',
+    isDefault: true,
+    permanent: true,
+    order: 0,
+    permissions: {
+      ban: false,
+      kick: false,
+      closeCam: false,
+      muteUserAudio: false,
+      muteUserChat: false,
+      muteRoomChat: false,
+      muteRoomAudio: false,
+      applyPassword: false,
+      assignOperator: false,
+      assignRoles: false,
+      playMedia: true,
+      controlMedia: false,
+      uploadEmoji: false,
+      roomDetails: false,
+    },
+  },
+};
+
+module.exports.tagFormat = /^\w+$/;

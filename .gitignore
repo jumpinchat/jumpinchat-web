@@ -1,0 +1,17 @@
+.idea
+.tmp
+node_modules
+bower_components
+dist
+react-client/fonts
+env
+!srv/config/env
+.DS_Store
+coverage
+
+*.log
+*.swp
+*.notrack.*
+.sass-cache
+dump.rdb
+.size-snapshot.json

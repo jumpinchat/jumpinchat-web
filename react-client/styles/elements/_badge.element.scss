@@ -1,0 +1,23 @@
+.dark {
+  @import './badge.dark';
+}
+
+.badge {
+  background-color: $black-05;
+  margin: {
+    left: 0.5em;
+  }
+  padding: 0.1em 0.35em;
+  font: {
+    size: 0.75em;
+    weight: 700;
+  }
+  text-transform: uppercase;
+  color: $white;
+  border-radius: 3px;
+  line-height: 1;
+
+  &--blue {
+    background-color: $color-blue-02;
+  }
+}

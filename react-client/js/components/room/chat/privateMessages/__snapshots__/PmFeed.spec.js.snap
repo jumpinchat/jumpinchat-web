@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PmFeed /> should render messages of selected conversation 1`] = `
+<div
+  className="chat__FeedWrapper"
+>
+  <ForwardRef
+    className="chat__Feed"
+    contentStyle={
+      Object {
+        "paddingBottom": "0.25em",
+      }
+    }
+    horizontal={false}
+    onScroll={[Function]}
+  >
+    <RoomChatMessages
+      currentUser={Object {}}
+      fixScroll={false}
+      messages={
+        Array [
+          Object {
+            "id": "bar1",
+            "message": "foo",
+          },
+          Object {
+            "id": "bar2",
+            "message": "foo",
+          },
+        ]
+      }
+      setScrollFixed={[Function]}
+    />
+  </ForwardRef>
+  <PmInput
+    disabled={false}
+    onChange={[MockFunction]}
+    onKeyDown={[Function]}
+    onSendMessage={[MockFunction]}
+    participant={
+      Object {
+        "handle": "bar",
+        "userListId": "foo",
+      }
+    }
+    value=""
+  />
+</div>
+`;

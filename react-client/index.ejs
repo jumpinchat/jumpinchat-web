@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= roomTitle %></title>
+  <meta
+    name="description"
+    content="<%= roomDescription %>"
+  >
+  <meta name="theme-color" content="#22ADD5">
+
+
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="/img/jic-logo-192x192.png">
+  <link rel="manifest" href="/<%= room.name %>/manifest.json" crossorigin="use-credentials">
+  <link rel="canonical" href="https://jumpin.chat/<%= room.name %>">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="preconnect" href="https://use.fontawesome.com/releases/" crossorigin>
+  <link rel="preconnect" href="https://webrtchacks.github.io" crossorigin>
+
+  <% if(room.attrs && room.attrs.owner) { %>
+    <meta name="robots" content="index,follow">
+  <% } else {%>
+    <meta name="robots" content="noindex,nofollow">
+  <% }%>
+
+  <meta property="fb:app_id" content="235461346984404" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<%= roomTitle %>" />
+  <meta property="og:url" content="https://jumpin.chat/<%= room.name %>" />
+  <meta
+    property="og:description"
+    content="<%= roomDescription %>"
+  />
+  <meta property="og:image" content="<%= roomDisplay %>">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="<%= roomDisplay %>">
+  <meta name="twitter:site" content="@jumpinchat">
+  <meta
+    name="twitter:description"
+    content="<%= roomDescription %>"
+  />
+  <meta name="twitter:title" content="<%= roomTitle %>" />
+  <meta property="twitter:url" content="https://jumpin.chat/<%= room.name %>" />
+
+  <link rel="preload" href="/img/loading.svg" as="image">
+  <link rel="prefetch" href="https://unpkg.com/emoji-datasource-apple@4.0.4/img/apple/sheets-256/32.png" as="image">
+
+  <link
+    media="(min-width: 640px)"
+    rel="prefetch stylesheet"
+    href="https://fonts.googleapis.com/css?family=Dosis:600,700&display=swap">
+  <link
+    media="(min-width: 640px)"
+    rel="prefetch stylesheet"
+    href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+  <link rel="prefetch stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
+
+  <link rel="prefetch stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/v4-shims.css">
+
+  <style>
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 64px;
+      min-height: 64px;
+      margin-top: -32px;
+      margin-left: -32px;
+      font-weight: 700;
+    }
+
+    .loading__Spinner {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 3px;
+      background: rgba(0,0,0,0.25);
+    }
+  </style>
+
+  <!-- build:css({.tmp,node_modules}) /styles/main.css -->
+  <link rel="stylesheet" href="/emoji-mart/css/emoji-mart.css"/>
+  <link rel="stylesheet" href="/styles/main.css"/>
+  <!-- endbuild -->
+</head>
+<body>
+<section id="app" class="app">
+  <div class="loading">
+    <img src="/img/loading.svg" alt="loading page" class="loading__Spinner">
+    <span>Loading site</span>
+  </div>
+</section>
+<noscript>JavaScript is required, please enable it and refresh.</noscript>
+<script src="https://cdn.ravenjs.com/3.26.4/raven.min.js" crossorigin="anonymous"></script>
+
+<!-- build:js({node_modules,.tmp, react-client}) /js/vendor.js -->
+<script src="/webrtc-adapter/out/adapter.js"></script>
+<script src="/js/lib/janus.js"></script>
+<!-- endbuild -->
+
+<!-- build:js(.tmp) /js/vendors.js nomodule="nomodule"-->
+<script nomodule src="/js/vendors.js"></script>
+<!-- endbuild -->
+
+<!-- build:js(.tmp) /js/vendors.mjs type="module" -->
+<script type="module" src="/js/vendors.mjs"></script>
+<!-- endbuild -->
+
+<!-- build:js(.tmp) /js/bundle.js nomodule="nomodule"-->
+<script nomodule src="/js/bundle.js"></script>
+<!-- endbuild -->
+
+<!-- build:js(.tmp) /js/bundle.mjs type="module" -->
+<script type="module" src="/js/bundle.mjs"></script>
+<!-- endbuild -->
+
+
+<script src="/version.js"></script>
+<script src="https://cdn.headwayapp.co/widget.js" async></script>
+
+<audio src="/sounds/jic-notification.mp3" id="notification-sound" preload="auto"></audio>
+<audio src="/sounds/jic-mention.mp3" id="mention-sound" preload="auto"></audio>
+
+<% if(gaId) { %>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('set', 'anonymizeIp', true);
+  ga('create', '<%= gaId %>', 'auto');
+  ga('send', 'pageview');
+</script>
+<% } %>
+</body>
+</html>

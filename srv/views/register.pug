@@ -1,0 +1,15 @@
+html
+	head
+		title Register
+	body
+		form(action="/api/user/register" method="POST")
+			label username
+			input(type="text" name="username")
+			label email
+			input(type="email" name="email")
+			label password
+			input(type="text" name="password")
+
+			button(type="submit") register
+
+

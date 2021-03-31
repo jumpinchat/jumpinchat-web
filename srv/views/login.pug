@@ -1,0 +1,13 @@
+html
+	head
+		title Login
+	body
+		form(action="/api/user/login" method="POST")
+			label username
+			input(type="text" name="username")
+			label password
+			input(type="text" name="password")
+
+			button(type="submit") login
+
+

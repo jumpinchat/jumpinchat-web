@@ -1,0 +1,275 @@
+.dark {
+  @import './button.dark';
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+  margin: 0;
+}
+
+@keyframes highlight {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  20% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.button {
+  position: relative;
+  min-width: 4rem;
+  min-height: 3.2rem;
+  padding: {
+    top: 0.25em;
+    right: 0.25em;
+    bottom: 0.25em;
+    left: 0.25em;
+  }
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  overflow: hidden;
+
+  user-select: none;
+  text-align: center;
+  color: inherit;
+
+  flex-shrink: 0;
+
+  font: {
+    size: 0.85em;
+    weight: 700;
+  }
+
+  @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+    padding: {
+      right: 1rem;
+      left: 1rem;
+    }
+
+    font: {
+      size: 1em;
+      weight: 400;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &-floating {
+    $height: 3.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: {
+      left: 1em;
+      right: 1em;
+    };
+    box-sizing: border-box;
+    border-radius: 3px;
+    font: {
+      weight: 700;
+    }
+    text-decoration: none;
+    box-shadow: 0 -1px rgba(0, 0, 0, 0.5) inset;
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      padding: {
+        right: 1em;
+        left: 1em;
+      }
+    }
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: auto;
+      max-height: 1.6rem;
+      margin: {
+        right: 0.25em;
+      }
+    }
+  }
+
+  &-toggle {
+    .jic-checkbox {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+  &-default {
+    background: $black-07;
+    border-radius: 3px;
+    box-shadow: 0 -1px rgba(0, 0, 0, 0.5) inset;
+    color: $black-02;
+
+    &:hover {
+      background: $black-09;
+    }
+  }
+
+  &-clear {
+    color: $black-05;
+
+    &:hover {
+      color: $color-blue-03;
+    }
+  }
+
+  &-white {
+    background: $white;
+
+    &:visited,
+    &:link {
+      color: $black-02;
+    }
+
+    &:hover,
+    &:disabled {
+      background: $black-09;
+    }
+  }
+
+  &-outline {
+    padding: {
+      right: 0.25em;
+      left: 0.25em;
+    }
+    border: 1px solid $white;
+    box-shadow: none;
+    color: $white;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      background: $white;
+      color: $black-04;
+    }
+
+    &:disabled {
+      border-color: rgba($white, 0.5);
+    }
+
+    @media screen and (min-width: $bp-02) and (min-height: $bp-height-01) {
+      padding: {
+        right: 1rem;
+        left: 1rem;
+      }
+    }
+  }
+
+  &-outlineBlack {
+    border: 1px solid $black-02;
+    box-shadow: none;
+    color: $black-02;
+
+    &:hover,
+    &:focus {
+      background: rgba($black-02, 0.25);
+      color: $black-02;
+    }
+  }
+
+  &-blue {
+    background: $color-blue-03;
+    color: $white;
+
+    &:hover {
+      background: $color-blue-04;
+    }
+
+    &:disabled {
+      background: $color-blue-05;
+    }
+  }
+
+  &-green {
+    background: $green-02;
+    color: $white;
+
+    &:hover {
+      background-color: $green-03;
+    }
+
+    &:disabled {
+      background-color: $green-04;
+    }
+  }
+
+  &-black {
+    background: $black-01;
+    color: $white;
+
+    &:hover {
+      background: $black-03;
+    }
+
+    &:disabled {
+      background: $black-03;
+    }
+  }
+
+  &-red {
+    background: $red-02;
+    color: $white;
+
+    &:hover {
+      background: $red-03;
+    }
+
+    &:disabled {
+      background: $red-03;
+    }
+  }
+
+  &--highlight {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.25;
+      background: linear-gradient(90deg, transparent, $white, transparent);
+      transform: translate3d(100%, 0, 0);
+      animation: 2s linear 500ms highlight infinite;
+    }
+  }
+
+  &--text {
+    background-color: transparent;
+    color: $black-10;
+    box-shadow: none;
+    font: {
+      weight: 700;
+    }
+    text-shadow: 0 1px $black-02;
+
+    &:hover,
+    &:focus {
+      color: $black-10;
+      background-color: rgba($black-10, 0.25);
+    }
+  }
+
+  &--small {
+    min-height: 2.4rem;
+    font: {
+      size: 0.85em;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.dark {
+  .roomUserSettings {
+    &__RoleListDropdown {
+      --dropdown-bg: #{$color-dark0};
+      --border-color: #{$color-dark2};
+    }
+  }
+}
+
+.roomUserSettings {
+  &__Filters {
+    display: flex;
+    margin: {
+      bottom: 3.2rem;
+    }
+  }
+
+  &__Filter {
+    max-width: 20em;
+    flex-grow: 1;
+
+    & + & {
+      margin: {
+        left: 1em;
+      }
+    }
+  }
+
+  &__List {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__ListItem {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+    border-top: 1px solid var(--menu-bg);
+    border-bottom: 1px solid var(--menu-bg);
+
+    & + & {
+      border-top: 0;
+    }
+
+    & > form {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__ListItemTitle {
+    width: 16ch;
+    margin: {
+      right: 1em;
+    }
+
+    font: {
+      weight: 600;
+    }
+  }
+
+  &__ItemActions {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-basis: 50%;
+  }
+
+  &__RoleSelectAction {
+  }
+
+  &__RoleCountPill {
+    margin: {
+      left: 0.5em;
+    }
+  }
+
+  &__NewInput {
+    max-width: 20em;
+    margin: {
+      right: 1.6rem;
+    }
+  }
+
+  &__NewInputError {
+    margin: {
+      left: 1.6rem;
+    }
+  }
+
+  &__RoleListDropdown {
+    --dropdown-bg: #{$black-10};
+    --border-color: #{$black-08};
+
+    position: relative;
+    max-height: 160px;
+    background-color: var(--dropdown-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.25);
+  }
+
+  &__RoleList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__RoleListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: {
+      right: 10px;
+      left: 1.6rem;
+    }
+
+    & + & {
+      border-top: 1px solid var(--border-color);
+    }
+  }
+
+  &__ListItemAction {
+    font: {
+      size: 1.25em;
+    }
+
+    margin: {
+      left: 1.6rem;
+    }
+  }
+}

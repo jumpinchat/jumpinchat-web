@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileInfo should explain guest user by default 1`] = `
+<div
+  className="profile__Info"
+>
+  foo
+   is a 
+  <strong>
+    guest user
+  </strong>
+</div>
+`;
+
+exports[`ProfileInfo should show join info if user has join and last seen data 1`] = `
+<div
+  className="profile__Info"
+>
+  foo
+   is a 
+  <strong>
+    awesome
+  </strong>
+  <React.Fragment>
+     
+    who joined 
+    01/01/2019
+     and was last seen 
+    01/01/2019
+  </React.Fragment>
+</div>
+`;
+
+exports[`ProfileInfo should show user type and username 1`] = `
+<div
+  className="profile__Info"
+>
+  foo
+   is a 
+  <strong>
+    awesome
+  </strong>
+</div>
+`;

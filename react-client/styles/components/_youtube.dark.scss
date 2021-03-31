@@ -1,0 +1,10 @@
+.youtube {
+  &__Result {
+    background-color: $color-dark4;
+
+    &:hover {
+      background-color: $color-dark3;
+      border-color: $theme-blue;
+    }
+  }
+}

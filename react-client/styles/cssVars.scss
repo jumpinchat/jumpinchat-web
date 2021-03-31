@@ -1,0 +1,94 @@
+@import "variables";
+
+body {
+  --black-01: #{$black-01};
+  --black-02: #{$black-02};
+  --black-03: #{$black-03};
+  --black-04: #{$black-04};
+  --black-05: #{$black-05};
+  --black-06: #{$black-06};
+  --black-07: #{$black-07};
+  --black-08: #{$black-08};
+  --black-09: #{$black-09};
+  --black-10: #{$black-10};
+
+  --green-01: #{$green-01};
+  --green-02: #{$green-02};
+  --green-03: #{$green-03};
+  --green-04: #{$green-04};
+  --green-05: #{$green-05};
+
+  --orange-01: #{$orange-01};
+  --orange-02: #{$orange-02};
+  --orange-03: #{$orange-03};
+  --orange-04: #{$orange-04};
+
+  --yellow-01: #{$yellow-01};
+  --yellow-02: #{$yellow-02};
+  --yellow-03: #{$yellow-03};
+
+  --red-01: #{$red-01};
+  --red-02: #{$red-02};
+  --red-03: #{$red-03};
+  --red-04: #{$red-04};
+
+  --muted: #{$muted};
+
+  --color-blue-01: #{$color-blue-01};
+  --color-blue-02: #{$color-blue-02};
+  --color-blue-03: #{$color-blue-03};
+  --color-blue-04: #{$color-blue-04};
+  --color-blue-05: #{$color-blue-05};
+  --color-blue-06: #{$color-blue-06};
+
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
+  --color-danger: #{$color-danger};
+  --color-error: #{$color-error};
+
+  --color-theme-dark: #{$color-theme-dark};
+
+  --color-dark0-hard: #{$color-dark0-hard};
+  --color-dark0: #{$color-dark0};
+  --color-dark0-soft: #{$color-dark0-soft};
+  --color-dark1: #{$color-dark1};
+  --color-dark2: #{$color-dark2};
+  --color-dark3: #{$color-dark3};
+  --color-dark4: #{$color-dark4};
+
+  --color-gray-245: #{$color-gray-245};
+
+  --color-light0-hard: #{$color-light0-hard};
+  --color-light0: #{$color-light0};
+  --color-light0-soft: #{$color-light0-soft};
+  --color-light1: #{$color-light1};
+  --color-light2: #{$color-light2};
+  --color-light3: #{$color-light3};
+  --color-light4: #{$color-light4};
+
+  --theme-red: #{$theme-red};
+  --theme-green: #{$theme-green};
+  --theme-yellow: #{$theme-yellow};
+  --theme-blue: #{$theme-blue};
+  --theme-purple: #{$theme-purple};
+  --theme-aqua: #{$theme-aqua};
+  --theme-orange: #{$theme-orange};
+
+  // dark
+  --theme-bright-red: #{$theme-bright-red};
+  --theme-bright-green: #{$theme-bright-green};
+  --theme-bright-yellow: #{$theme-bright-yellow};
+  --theme-bright-blue: #{$theme-bright-blue};
+  --theme-bright-purple: #{$theme-bright-purple};
+  --theme-bright-aqua: #{$theme-bright-aqua};
+  --theme-bright-orange: #{$theme-bright-orange};
+
+  // light
+  --theme-faded-red: #{$theme-faded-red};
+  --theme-faded-green: #{$theme-faded-green};
+  --theme-faded-yellow: #{$theme-faded-yellow};
+  --theme-faded-blue: #{$theme-faded-blue};
+  --theme-faded-purple: #{$theme-faded-purple};
+  --theme-faded-aqua: #{$theme-faded-aqua};
+  --theme-faded-orange: #{$theme-faded-orange};
+}
