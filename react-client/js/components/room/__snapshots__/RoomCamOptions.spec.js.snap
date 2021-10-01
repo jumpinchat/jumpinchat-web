@@ -57,7 +57,7 @@ exports[`<RoomCamOptions /> should show the play video button if room is registe
         flip={null}
         icon={
           Array [
-            "far",
+            "fas",
             "film",
           ]
         }
