@@ -114,7 +114,7 @@ export class RoomCamOptions extends PureComponent {
               onClick={this.handleOpenVideoModal}
             >
               <FontAwesomeIcon
-                icon={['far', 'film']}
+                icon={['fas', 'film']}
               />
               &nbsp;
               <span className="chat__HeaderOptionString">

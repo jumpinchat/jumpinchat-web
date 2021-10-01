@@ -71,7 +71,7 @@ class YoutubePlaylistItemOptions extends Component {
           type="button"
         >
           <FontAwesomeIcon
-            icon={['far', 'ellipsis-v']}
+            icon={['fas', 'ellipsis-v']}
           />
         </button>
         {
