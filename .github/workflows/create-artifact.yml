@@ -53,7 +53,9 @@ jobs:
       - name: Build artifact
         run: |
           gulp build
-          zip artifact dist
+          ls .
+          ls dist
+          zip artifact $GITHUB_WORKSPACE/dist
 
       - name: Create Release
         id: create_release
@@ -63,7 +65,7 @@ jobs:
         with:
           tag_name: ${{ steps.vars.outputs.sha_short }}
           release_name: Release ${{ steps.vars.outputs.sha_short }}
-          draft: false
+          draft: true # TODO set to false when done testing
           prerelease: false
       - name: Upload Release Asset
         id: upload-release-asset
