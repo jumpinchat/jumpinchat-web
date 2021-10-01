@@ -52,7 +52,7 @@ const RoleDropdown = ({
                   type="button"
                   onClick={() => onAddRole(role._id)}
                 >
-                  <FontAwesomeIcon icon={['far', 'square']} />
+                  <FontAwesomeIcon icon={['fas', 'square']} />
                 </button>
               )}
               {hasRole(role.tag) && (

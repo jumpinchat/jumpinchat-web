@@ -74,7 +74,7 @@ class VideoVolumeControl extends Component {
           )}
 
           {volume > 25 && volume <= 75 && (
-            <FontAwesomeIcon icon={['fas', 'volume']} />
+            <FontAwesomeIcon icon={['fas', 'volume-down']} />
           )}
 
           {volume > 0 && volume <= 25 && (

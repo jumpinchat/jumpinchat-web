@@ -248,16 +248,10 @@ class SettingsRoomRoles extends Component {
                   icons={[
                     'star',
                     'star-half-alt',
-                    'shield',
                     'shield-alt',
                     'tag',
                     'circle',
-                    'square',
-                    'triangle',
-                    'diamond',
-                    'hexagon',
-                    'octagon',
-                    'badge',
+                    'certificate',
                   ]}
                 />
               </div>

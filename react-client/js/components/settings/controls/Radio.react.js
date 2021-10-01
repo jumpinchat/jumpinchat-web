@@ -24,7 +24,7 @@ const Radio = ({
       checked={checked}
     />
     {!checked && (
-      <FontAwesomeIcon icon={['far', 'square']} />
+      <FontAwesomeIcon icon={['fas', 'square']} />
     )}
     {checked && (
       <FontAwesomeIcon icon={['fas', 'check-square']} />

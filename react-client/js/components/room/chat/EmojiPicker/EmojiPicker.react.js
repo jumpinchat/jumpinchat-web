@@ -36,7 +36,7 @@ const EmojiPicker = ({
       }}
     >
       <FontAwesomeIcon
-        icon={['far', 'smile']}
+        icon={['fas', 'smile']}
       />
     </button>
     {open && (

@@ -9,7 +9,7 @@ const SettingsClose = ({ onClick }) => (
       type="button"
       onClick={onClick}
     >
-      <FontAwesomeIcon icon={['far', 'times']} />
+      <FontAwesomeIcon icon={['fas', 'times']} />
     </button>
     <span className="settings__CloseLabel">ESC</span>
   </div>
