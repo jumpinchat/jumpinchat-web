@@ -66,7 +66,7 @@ class Notification extends Component {
           className="banner__Close"
           type="button"
         >
-          <FontAwesomeIcon icon={['far', 'times']} />
+          <FontAwesomeIcon icon={['fas', 'times']} />
         </button>
       );
     }

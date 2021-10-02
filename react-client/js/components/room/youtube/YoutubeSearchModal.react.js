@@ -77,7 +77,7 @@ class YoutubeSearchModal extends Component {
               tabIndex="-1"
             >
               <FontAwesomeIcon
-                icon={['far', 'times']}
+                icon={['fas', 'times']}
               />
             </button>
           </div>

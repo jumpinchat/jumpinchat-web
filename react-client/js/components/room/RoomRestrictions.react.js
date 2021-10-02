@@ -37,7 +37,7 @@ const RoomRestrictions = ({ restrictions }) => (
         position="bottom"
       >
         <span className="cams__Restriction">
-          <FontAwesomeIcon icon={['far', 'eye-slash']} />
+          <FontAwesomeIcon icon={['fas', 'eye-slash']} />
         </span>
       </Tooltip>
     )}

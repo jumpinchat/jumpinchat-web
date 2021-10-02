@@ -7,6 +7,7 @@ const root = fs.realpathSync(process.cwd());
 const isProduction = () => process.env.NODE_ENV === 'production';
 
 let optimization = {};
+const plugins = [];
 
 if (isProduction()) {
   optimization = {
@@ -23,6 +24,10 @@ if (isProduction()) {
       }),
     ],
   };
+}
+
+if (!isProduction()) {
+  plugins.push(new ProgressPlugin());
 }
 
 module.exports = ({ esNext = true, watch }) => ({
@@ -82,7 +87,5 @@ module.exports = ({ esNext = true, watch }) => ({
       },
     ],
   },
-  plugins: [
-    new ProgressPlugin(),
-  ],
+  plugins,
 });

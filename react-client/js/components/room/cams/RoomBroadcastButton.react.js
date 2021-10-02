@@ -115,7 +115,7 @@ class RoomBroadcastButton extends Component {
           disabled={!canBroadcast || feedCount === 12}
         >
           <FontAwesomeIcon
-            icon={['far', 'webcam']}
+            icon={['fas', 'video']}
           />
           <span className="mobileHidden">
             &nbsp;{startMessage}
@@ -131,7 +131,7 @@ class RoomBroadcastButton extends Component {
         disabled={!canBroadcast}
       >
         <FontAwesomeIcon
-          icon={['far', 'webcam-slash']}
+          icon={['fas', 'video-slash']}
         />
         &nbsp;
         <span className="mobileHidden">
