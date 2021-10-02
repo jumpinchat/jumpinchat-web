@@ -1,6 +1,6 @@
 {
   "name": "tc-replacement",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "throw-away chatrooms with drop-in user accounts and webcams",
   "main": "srv/index.js",
   "engines": {
