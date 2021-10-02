@@ -1,8 +1,8 @@
 name: Build artifact
 on:
   push:
-    # tags:
-    #   - 'v*'
+     tags:
+       - 'v*'
 
 jobs:
   build:
@@ -19,6 +19,7 @@ jobs:
         shell: bash
         run: |
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "##[set-output name=tag;]$(echo ${GITHUB_REF#refs/tags/})"
           echo "::set-output name=sha_short::$(echo ${GITHUB_SHA} | cut -c 1-7)"
         env:
           GITHUB_REF: ${{ github.ref }}
@@ -63,8 +64,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          tag_name: ${{ steps.vars.outputs.sha_short }}
-          release_name: Release ${{ steps.vars.outputs.sha_short }}
+          tag_name: ${{ steps.vars.outputs.tag }}
+          release_name: Release ${{ steps.vars.outputs.tag }}
           draft: true # TODO set to false when done testing
           prerelease: false
       - name: Upload Release Asset
@@ -78,5 +79,5 @@ jobs:
           # https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./artifact.zip
-          asset_name: jic-web-${{ steps.vars.outputs.sha_short }}.zip
+          asset_name: jic-web-${{ steps.vars.outputs.tag }}.zip
           asset_content_type: application/zip
